@@ -210,20 +210,19 @@
   </mailingLists>
 
   <distributionManagement>
-    <site>
-      <!-- this needs to match a server in your settings.xml with upload settings -->
-      <id>activemq-website</id>
-      <!-- set the staging.siteURL in your ~/.m2/settings.xml in a release or other profile -->
-      <url>${staging.siteURL}/maven/${project.version}</url>
-      <!--<url>${site-repo-url}</url>-->
-    </site>
     <snapshotRepository>
-      <id>apache.snapshots.https</id>
-      <name>Apache Development Snapshot Repository</name>
-      <url>https://repository.apache.org/content/repositories/snapshots</url>
-      <uniqueVersion>false</uniqueVersion>
+      <id>talend.thirdparty</id>
+      <name>Talend ESB Third Party</name>
+      <url>http://sop-ip14.servicebackbone.org:8081/nexus/content/repositories/thirdparty-snapshots</url>
     </snapshotRepository>
+
+    <repository>
+      <id>talend.thirdparty</id>
+      <name>Talend ESB Third Party</name>
+      <url>http://sop-ip14.servicebackbone.org:8081/nexus/content/repositories/thirdparty-dev</url>
+    </repository>
   </distributionManagement>
+
 
   <modules>
     <module>activemq-openwire-generator</module>
@@ -266,8 +265,8 @@
   </modules>
 
   <scm>
-    <connection>scm:git:http://git-wip-us.apache.org/repos/asf/activemq.git</connection>
-    <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/activemq.git</developerConnection>
+    <connection>scm:git:ssh://git@github.com:Talend/activemq.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:Talend/activemq.git</developerConnection>
     <url>https://fisheye6.atlassian.com/browse/~br=master/activemq-git</url>
     <tag>HEAD</tag>
   </scm>
