@@ -1,4 +1,4 @@
-def GIT_URL = 'https://github.com/Talend/karaf.git'
+def GIT_URL = 'https://github.com/Talend/activemq.git'
 def DEFAULT_BRANCH = 'tesb/activemq-5.15.2.x'
 def DEFAULT_MVN_MODULES = ':activemq-camel,:activemq-osgi'
 
