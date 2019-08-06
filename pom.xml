@@ -32,6 +32,8 @@
 
   <properties>
     <upstream.version>5.15.5</upstream.version>
+    <activemq-camel.tesb.version>5.15.5.tesb1</activemq-camel.tesb.version>
+    <activemq-all.tesb.version>5.15.5.tesb1</activemq-all.tesb.version>
 
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>
@@ -49,7 +51,7 @@
     <aries-version>1.1.0</aries-version>
     <aries-transaction-version>1.1.1</aries-transaction-version>
     <axion-version>1.0-M3-dev</axion-version>
-    <camel-version>2.19.5</camel-version>
+    <camel-version>2.21.2</camel-version>
     <camel-version-range>[2.18,3)</camel-version-range>
     <cglib-version>2.2</cglib-version>
     <commons-beanutils-version>1.9.3</commons-beanutils-version>
@@ -345,7 +347,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-all</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-all.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>

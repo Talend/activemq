@@ -1,6 +1,6 @@
 def GIT_URL = 'https://github.com/Talend/activemq.git'
 def DEFAULT_BRANCH = 'tesb/activemq-5.15.5.x'
-def DEFAULT_MVN_MODULES = ':activemq-camel'
+def DEFAULT_MVN_MODULES = ':activemq-camel,:activemq-all'
 
 pipeline {
 
