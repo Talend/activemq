@@ -32,6 +32,10 @@
 
   <properties>
     <upstream.version>5.15.2</upstream.version>
+    <activemq-karaf.features.tesb.version>5.15.2.tesb1</activemq-karaf.features.tesb.version>
+    <activemq-osgi.tesb.version>5.15.2.tesb1</activemq-osgi.tesb.version>
+    <org.apache.servicemix.bundles.xstream.tesb.version>1.4.10_1</org.apache.servicemix.bundles.xstream.tesb.version>
+    <jackson-databind.tesb.version>2.6.7.1</jackson-databind.tesb.version>
 
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>

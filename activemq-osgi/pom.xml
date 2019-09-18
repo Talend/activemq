@@ -29,9 +29,10 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: OSGi bundle</name>
   <description>Puts together an ActiveMQ OSGi bundle</description>
-  <version>5.15.2.tesb1</version>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-osgi.tesb.version}</revision>
     <activemq.osgi.import.pkg>
       !org.apache.commons.daemon,
       !org.apache.maven*,
