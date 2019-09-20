@@ -32,10 +32,11 @@
 
   <properties>
     <upstream.version>5.15.9</upstream.version>
+    <activemq-karaf.tesb.version>5.15.9.tesb1</activemq-karaf.tesb.version>
     <activemq-web-console.tesb.version>5.15.9.tesb1</activemq-web-console.tesb.version>
 
     <activeio-version>3.1.4</activeio-version>
-    <siteId>activemq-${project.version}</siteId>
+    <siteId>activemq-${upstream.version}</siteId>
     <projectName>Apache ActiveMQ</projectName>
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
@@ -183,7 +184,7 @@
     <activemq.osgi.export.pkg>org.apache.activemq*</activemq.osgi.export.pkg>
     <activemq.osgi.private.pkg>!*</activemq.osgi.private.pkg>
     <activemq.osgi.export>${activemq.osgi.export.pkg}*;version=${activemq.osgi.export.version};-noimport:=true</activemq.osgi.export>
-    <activemq.osgi.export.version>${project.version}</activemq.osgi.export.version>
+    <activemq.osgi.export.version>${upstream.version}</activemq.osgi.export.version>
     <activemq.osgi.import>${activemq.osgi.import.pkg}</activemq.osgi.import>
     <activemq.osgi.dynamic.import />
     <activemq.osgi.symbolic.name>${project.groupId}.${project.artifactId}</activemq.osgi.symbolic.name>
@@ -217,7 +218,7 @@
       <!-- this needs to match a server in your settings.xml with upload settings -->
       <id>activemq-website</id>
       <!-- set the staging.siteURL in your ~/.m2/settings.xml in a release or other profile -->
-      <url>${staging.siteURL}/maven/${project.version}</url>
+      <url>${staging.siteURL}/maven/${upstream.version}</url>
       <!--<url>${site-repo-url}</url>-->
     </site>
     <snapshotRepository>
@@ -1197,7 +1198,7 @@
             <goals>deploy</goals>
             <remoteTagging>false</remoteTagging>
             <suppressCommitBeforeTag>false</suppressCommitBeforeTag>
-            <tagNameFormat>activemq-@{project.version}</tagNameFormat>
+            <tagNameFormat>activemq-@{upstream.version}</tagNameFormat>
           </configuration>
           <dependencies>
             <dependency>
@@ -1416,7 +1417,7 @@
             <DynamicImport-Package>${activemq.osgi.dynamic.import}</DynamicImport-Package>
             <Private-Package>${activemq.osgi.private.pkg}</Private-Package>
             <Implementation-Title>Apache ActiveMQ</Implementation-Title>
-            <Implementation-Version>${project.version}</Implementation-Version>
+            <Implementation-Version>${upstream.version}</Implementation-Version>
             <_versionpolicy-impl>[$(version;==;$(@)),$(version;=+;$(@)))</_versionpolicy-impl>
             <_versionpolicy-uses>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy-uses>
             <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
@@ -1432,7 +1433,7 @@
             </goals>
             <configuration>
               <versions>
-                <activemq.osgi.version>${project.version}</activemq.osgi.version>
+                <activemq.osgi.version>${upstream.version}</activemq.osgi.version>
               </versions>
             </configuration>
           </execution>
