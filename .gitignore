@@ -10,6 +10,7 @@ target
 .project
 .classpath
 .settings
+.resolved-pom.xml
 eclipse-classes
 activemq-unit-tests/ActiveMQConnections.dot
 activemq-unit-tests/KahaDB

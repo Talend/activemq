@@ -160,16 +160,16 @@
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Fragment-Host>org.apache.activemq.activemq-core</Fragment-Host>
             <Export-Package>
-              org.apache.activemq.transport.http*;version=${project.version};-noimport:=;-split-package:=merge-last,
-              org.apache.activemq.transport.https*;version=${project.version};-noimport:=;-split-package:=merge-last
+              org.apache.activemq.transport.http*;version=${upstream.version};-noimport:=;-split-package:=merge-last,
+              org.apache.activemq.transport.https*;version=${upstream.version};-noimport:=;-split-package:=merge-last
             </Export-Package>
             <Import-Package>
               org.eclipse.jetty*;version="[9.0,10.0)";resolution:=optional,
-              !org.apache.activemq.transport.ws*;version=${project.version},
-              !org.apache.activemq.transport.xstream;version=${project.version},
-              !org.apache.activemq.transport.util;version=${project.version},
+              !org.apache.activemq.transport.ws*;version=${upstream.version},
+              !org.apache.activemq.transport.xstream;version=${upstream.version},
+              !org.apache.activemq.transport.util;version=${upstream.version},
               org.apache.xbean*;version="[3.13,5)",
-              org.apache.activemq*;version=${project.version};resolution:=optional
+              org.apache.activemq*;version=${upstream.version};resolution:=optional
             </Import-Package>
           </instructions>
         </configuration>

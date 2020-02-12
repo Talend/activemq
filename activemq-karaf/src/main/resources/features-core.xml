@@ -18,13 +18,13 @@
 
 -->
 
-<features name="activemq-core-${project.version}">
+<features name="activemq-core-${upstream.version}">
 
     <!-- In order to work with any Karaf version, the user has to add spring-legacy features repo by hand corresponding to his Karaf version -->
     <!-- <repository>mvn:org.apache.karaf.features/spring-legacy/[4,6)/xml/features</repository> -->
 
     <!-- Bundles needed if only client will be deployed in the container -->
-    <feature name="activemq-client" description="ActiveMQ client libraries" version="${project.version}" resolver="(obr)" start-level="50">
+    <feature name="activemq-client" description="ActiveMQ client libraries" version="${upstream.version}" resolver="(obr)" start-level="50">
         <feature version="[4,6)">spring</feature>
         <feature version="[4,5)">shell-compat</feature>
         <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-annotation_1.0_spec/1.1.1</bundle>
@@ -37,21 +37,21 @@
         <bundle dependency="false">mvn:commons-net/commons-net/${commons-net-version}</bundle>
         <bundle dependency='true'>mvn:org.apache.zookeeper/zookeeper/${zookeeper-version}</bundle>
         <!-- uber osgi bundle means client is not that lean, todo: introduce client osgi bundle -->
-        <bundle>mvn:org.apache.activemq/activemq-osgi/${project.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-osgi/${upstream.version}</bundle>
     </feature>
-    
-    <feature name="activemq-cf" description="ActiveMQ ConnectionFactory from config" version="${project.version}" resolver="(obr)" start-level="50">
+
+    <feature name="activemq-cf" description="ActiveMQ ConnectionFactory from config" version="${upstream.version}" resolver="(obr)" start-level="50">
         <feature>activemq-client</feature>
         <feature>scr</feature>
-        <bundle>mvn:org.apache.activemq/activemq-cf/${project.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-cf/${upstream.version}</bundle>
     </feature>
 
     <!-- All bundles needed by the broker -->
-    <feature name="activemq" description="ActiveMQ broker libraries" version="${project.version}" resolver="(obr)" start-level="50">
+    <feature name="activemq" description="ActiveMQ broker libraries" version="${upstream.version}" resolver="(obr)" start-level="50">
       <feature>connector</feature>
       <feature>http</feature>
-      <feature version="${project.version}">activemq-client</feature>
-      <bundle>mvn:org.apache.activemq/activemq-karaf/${project.version}</bundle>
+      <feature version="${upstream.version}">activemq-client</feature>
+      <bundle>mvn:org.apache.activemq/activemq-karaf/${upstream.version}</bundle>
       <bundle dependency="true">mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
       <bundle dependency='true'>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
       <bundle dependency="true">mvn:commons-codec/commons-codec/1.9</bundle>
