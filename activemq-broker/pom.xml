@@ -29,8 +29,10 @@
   <packaging>jar</packaging>
   <name>ActiveMQ :: Broker</name>
   <description>The ActiveMQ Message Broker implementation</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-broker.tesb.version}</revision>
     <surefire.argLine>-Xmx512M</surefire.argLine>
   </properties>
 
@@ -41,6 +43,7 @@
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-client</artifactId>
+      <version>${activemq-client.tesb.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>

@@ -29,8 +29,10 @@
   <packaging>war</packaging>
   <name>ActiveMQ :: Web Console</name>
   <description>Web Console for ActiveMQ</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-web-console.tesb.version}</revision>
     <jetty.port>8080</jetty.port>
     <jetty.maven.groupid>org.eclipse.jetty</jetty.maven.groupid>
   </properties>

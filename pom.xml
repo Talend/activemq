@@ -32,6 +32,12 @@
 
   <properties>
     <upstream.version>5.15.10</upstream.version>
+    <activemq-karaf.features.tesb.version>5.15.10.tesb1</activemq-karaf.features.tesb.version>
+    <activemq-web-console.tesb.version>5.15.10.tesb1</activemq-web-console.tesb.version>
+    <activemq-client.tesb.version>5.15.10.tesb1</activemq-client.tesb.version>
+    <activemq-osgi.tesb.version>5.15.10.tesb1</activemq-osgi.tesb.version>
+    <activemq-broker.tesb.version>5.15.10.tesb1</activemq-broker.tesb.version>
+
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>
     <projectName>Apache ActiveMQ</projectName>
@@ -332,7 +338,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-client.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
@@ -342,7 +348,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-broker</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-broker.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
@@ -428,7 +434,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-web-console</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-web-console.tesb.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
@@ -1168,6 +1174,11 @@
               <!-- something like :
               <my.custom.property>${my.custom.property}</my.custom.property>
               -->
+              <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
+              <activemq-client.tesb.version>${activemq-client.tesb.version}</activemq-client.tesb.version>
+              <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
+              <activemq-broker.tesb.version>${activemq-broker.tesb.version}</activemq-broker.tesb.version>
             </properties>
           </configuration>
           <executions>
