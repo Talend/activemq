@@ -28,6 +28,7 @@ import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.DefaultHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -49,6 +50,7 @@ public class HttpsClientTransport extends HttpClientTransport {
         try {
             SSLConnectionSocketFactory sslConnectionFactory = new SSLConnectionSocketFactory(createSocketFactory(), new DefaultHostnameVerifier());
             registryBuilder.register("https", sslConnectionFactory);
+            registryBuilder.register("http", PlainConnectionSocketFactory.INSTANCE);
             return registryBuilder.build();
         } catch (Exception e) {
             throw new IllegalStateException("Failure trying to create scheme registry", e);
