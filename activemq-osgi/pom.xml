@@ -112,6 +112,19 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>activemq-broker</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>${project.groupId}</groupId>
+          <artifactId>activemq-client</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- Patched client -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>activemq-client</artifactId>
+      <version>5.15.11</version>
+      <classifier>tipaas</classifier>
     </dependency>
 
     <!-- Additional message store impls -->
