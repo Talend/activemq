@@ -268,6 +268,7 @@
     <module>activemq-log4j-appender</module>
     <module>activemq-http</module>
 -->
+    <module>activemq-spring</module>
     <module>activemq-http</module>
     <module>activemq-osgi</module>
   </modules>
