@@ -231,9 +231,7 @@
   <modules>
 <!--
     <module>activemq-openwire-generator</module>
--->
     <module>activemq-client</module>
-<!--
     <module>activemq-openwire-legacy</module>
     <module>activemq-broker</module>
     <module>activemq-stomp</module>
@@ -260,9 +258,7 @@
     <module>activemq-tooling</module>
     <module>activemq-web</module>
     <module>activemq-partition</module>
--->
     <module>activemq-osgi</module>
-<!--
     <module>activemq-blueprint</module>
     <module>activemq-web-demo</module>
     <module>activemq-web-console</module>
@@ -272,6 +268,8 @@
     <module>activemq-log4j-appender</module>
     <module>activemq-http</module>
 -->
+    <module>activemq-http</module>
+    <module>activemq-osgi</module>
   </modules>
 
   <scm>

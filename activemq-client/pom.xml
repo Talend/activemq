@@ -259,22 +259,6 @@
                       </sources>
                   </configuration>
               </execution>
-              <execution>
-                  <id>attach-artifacts</id>
-                  <phase>package</phase>
-                  <goals>
-                      <goal>attach-artifact</goal>
-                  </goals>
-                  <configuration>
-                      <artifacts>
-                          <artifact>
-                              <file>target/activemq-client-5.15.11.jar</file>
-                              <type>jar</type>
-                              <classifier>tipaas</classifier>
-                          </artifact>
-                      </artifacts>
-                  </configuration>
-              </execution>
           </executions>
       </plugin>
     </plugins>
