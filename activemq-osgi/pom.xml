@@ -84,8 +84,8 @@
         *
     </activemq.osgi.import.pkg>
     <activemq.osgi.export>
-      org.apache.activemq.osgi*;version=${project.version};-noimport:=true;-split-package:=merge-first,
-      org.apache.activemq.camel*;version=${project.version};-noimport:=true;-split-package:=merge-first,
+      org.apache.activemq.osgi*;version=${activemq-osgi.tesb.version};-noimport:=true;-split-package:=merge-first,
+      org.apache.activemq.camel*;version=${activemq-camel.tesb.version};-noimport:=true;-split-package:=merge-first,
       org.apache.activemq*;version=${upstream.version};-noimport:=true;-split-package:=merge-first,
       org.apache.activemq.web*;version=${upstream.version};-noimport:=true;-split-package:=merge-first,
     </activemq.osgi.export>
@@ -180,7 +180,8 @@
       <version>${upstream.version}</version>
       <exclusions>
       <exclusion>
-          <artifactId>activemq-all</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>activemq-all</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
