@@ -31,3 +31,4 @@ dependency-reduced-pom.xml
 velocity.log
 
 /.metadata
+.resolved-pom.xml
