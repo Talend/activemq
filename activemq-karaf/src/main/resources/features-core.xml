@@ -51,7 +51,7 @@
       <feature>connector</feature>
       <feature>http</feature>
       <feature version="${upstream.version}">activemq-client</feature>
-      <bundle>mvn:org.apache.activemq/activemq-karaf/${upstream.version}</bundle>
+      <bundle>mvn:org.apache.activemq/activemq-karaf/${activemq-karaf.features.tesb.version}</bundle>
       <bundle dependency="true">mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
       <bundle dependency='true'>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
       <bundle dependency="true">mvn:commons-codec/commons-codec/1.9</bundle>
@@ -65,9 +65,9 @@
       <bundle dependency="true">mvn:org.apache.aries/org.apache.aries.util/${aries-version}</bundle>
       <bundle dependency="true">mvn:org.apache.activemq/activeio-core/${activeio-version}</bundle>
       <bundle dependency="true">mvn:org.codehaus.jettison/jettison/${jettison-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson-version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
       <bundle dependency="true">mvn:org.scala-lang/scala-library/${scala-version}</bundle>
     </feature>
   </features>
