@@ -32,13 +32,13 @@
 
   <properties>
     <upstream.version>5.15.10</upstream.version>
-    <activemq-karaf.features.tesb.version>5.15.10.tesb2</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.10.tesb3</activemq-karaf.features.tesb.version>
     <activemq-web-console.tesb.version>5.15.10.tesb1</activemq-web-console.tesb.version>
     <activemq-client.tesb.version>5.15.10.tesb1</activemq-client.tesb.version>
     <activemq-osgi.tesb.version>5.15.10.tesb1</activemq-osgi.tesb.version>
     <activemq-broker.tesb.version>5.15.10.tesb1</activemq-broker.tesb.version>
 
-    <jackson.tesb.version>2.10.1</jackson.tesb.version>
+    <jackson.tesb.version>2.11.4</jackson.tesb.version>
 
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>
