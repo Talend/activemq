@@ -88,8 +88,8 @@
         *
     </activemq.osgi.import.pkg>
     <activemq.osgi.export>
-      org.apache.activemq*;version=${project.version};-noimport:=true;-split-package:=merge-first,
-      org.apache.activemq.web*;version=${project.version};-noimport:=true;-split-package:=merge-first,
+      org.apache.activemq*;version=${upstream.version};-noimport:=true;-split-package:=merge-first,
+      org.apache.activemq.web*;version=${upstream.version};-noimport:=true;-split-package:=merge-first,
     </activemq.osgi.export>
     <activemq.osgi.private.pkg>
          org.apache.xbean*,
@@ -127,7 +127,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>activemq-leveldb-store</artifactId>
-      <version>${project.version}</version>
+      <version>${upstream.version}</version>
     </dependency>
 
     <!-- Additional protocol impls -->
@@ -177,7 +177,7 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>activemq-spring</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-blueprint</artifactId>
@@ -378,91 +378,91 @@
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-client</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-openwire-legacy</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-jaas</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-broker</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-console</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-spring</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-amqp</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-http</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-mqtt</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-stomp</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-kahadb-store</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-jdbc-store</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-leveldb-store</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
