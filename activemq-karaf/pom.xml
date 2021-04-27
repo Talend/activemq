@@ -183,7 +183,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Export-Package>org.apache.activemq.karaf*;version=${project.version};-split-package:=merge-first</Export-Package>
+            <Export-Package>org.apache.activemq.karaf*;version=${upstream.version};-split-package:=merge-first</Export-Package>
             <Import-Package>
               !com.google.errorprone.annotations,
               !com.google.errorprone.annotations.concurrent,
