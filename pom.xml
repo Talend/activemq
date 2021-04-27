@@ -31,16 +31,17 @@
   <inceptionYear>2005</inceptionYear>
 
   <properties>
-    <upstream.version>5.15.14</upstream.version>
+    <upstream.version>5.15.15</upstream.version>
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>
     <projectName>Apache ActiveMQ</projectName>
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.15.14.tesb1</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.15.tesb1</activemq-karaf.features.tesb.version>
     <jackson.tesb.version>2.11.4</jackson.tesb.version>
     <jackson.databind.tesb.version>2.11.4</jackson.databind.tesb.version>
+    <xstream-bundle.tesb.version>1.4.16_1</xstream-bundle.tesb.version>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -1148,6 +1149,7 @@
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson.databind.tesb.version>${jackson.databind.tesb.version}</jackson.databind.tesb.version>
+              <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
             </properties>
           </configuration>
           <executions>
