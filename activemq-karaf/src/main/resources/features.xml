@@ -39,12 +39,12 @@
 
     <feature name="activemq-shell" version="${upstream.version}">
         <feature>shell-compat</feature>
-        <bundle>mvn:org.apache.activemq/activemq-karaf/${project.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-karaf/${upstream.version}</bundle>
     </feature>
 
     <feature name="activemq-camel" version="${upstream.version}">
-        <feature version="${project.version}">activemq-client</feature>
-        <bundle>mvn:org.apache.activemq/activemq-camel/${project.version}</bundle>
+        <feature version="${upstream.version}">activemq-client</feature>
+        <bundle>mvn:org.apache.activemq/activemq-camel/${upstream.version}</bundle>
         <feature version="${camel-version-range}">camel-jms</feature>
         <feature version="${camel-version-range}">camel</feature>
         <feature version="${camel-version-range}">camel-spring</feature>
