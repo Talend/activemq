@@ -38,7 +38,7 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.15.15.tesb2</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.15.tesb3</activemq-karaf.features.tesb.version>
     <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.11.4</jackson.tesb.version>
     <jackson.databind.tesb.version>2.11.4</jackson.databind.tesb.version>
