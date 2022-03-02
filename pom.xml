@@ -39,7 +39,7 @@
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
     <activemq-karaf.features.tesb.version>5.15.15.tesb3</activemq-karaf.features.tesb.version>
-    <activemq-web-console.tesb.version>5.15.15.tesbw2</activemq-web-console.tesb.version>
+    <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.11.4</jackson.tesb.version>
     <jackson.databind.tesb.version>2.11.4</jackson.databind.tesb.version>
     <xstream-bundle.tesb.version>1.4.19_1</xstream-bundle.tesb.version>
