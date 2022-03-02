@@ -1,5 +1,5 @@
 @Library('esb') _
 
 Fork(
-        MVN_MODULES: ':activemq-karaf'
+        MVN_MODULES: ':activemq-karaf,:activemq-web-console'
 )

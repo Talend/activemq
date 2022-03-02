@@ -59,7 +59,7 @@
       <feature>war</feature>
       <feature>eventadmin</feature>
       <configfile finalname="${karaf.etc}/org.apache.activemq.webconsole.cfg">mvn:org.apache.activemq/activemq-karaf/${upstream.version}/cfg/activemq-webconsole</configfile>
-      <bundle>mvn:org.apache.activemq/activemq-web-console/${upstream.version}/war</bundle>
+      <bundle>mvn:org.apache.activemq/activemq-web-console/${activemq-web-console.tesb.version}/war</bundle>
     </feature>
 
     <feature name="activemq-blueprint" version="${upstream.version}">

@@ -38,10 +38,14 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.15.15.tesb2</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.15.tesb3</activemq-karaf.features.tesb.version>
+    <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.11.4</jackson.tesb.version>
     <jackson.databind.tesb.version>2.11.4</jackson.databind.tesb.version>
-    <xstream-bundle.tesb.version>1.4.17_1</xstream-bundle.tesb.version>
+    <xstream-bundle.tesb.version>1.4.19_1</xstream-bundle.tesb.version>
+    <xstream.tesb.version>1.4.19</xstream.tesb.version>
+    <slf4j.tesb.version>1.7.36</slf4j.tesb.version>
+    <reload4j.tesb.version>1.2.19</reload4j.tesb.version>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -921,7 +925,7 @@
       <dependency>
         <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
-        <version>${xstream-version}</version>
+        <version>${xstream.tesb.version}</version>
         <exclusions>
           <exclusion>
             <!-- xom is an optional dependency of xstream. Its also
@@ -1147,9 +1151,13 @@
               <my.custom.property>${my.custom.property}</my.custom.property>
               -->
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson.databind.tesb.version>${jackson.databind.tesb.version}</jackson.databind.tesb.version>
               <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
+              <xstream.tesb.version>${xstream.tesb.version}</xstream.tesb.version>
+              <slf4j.tesb.version>${slf4j.tesb.version}</slf4j.tesb.version>
+              <reload4j.tesb.version>${reload4j.tesb.version}</reload4j.tesb.version>
             </properties>
           </configuration>
           <executions>
