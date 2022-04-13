@@ -109,9 +109,9 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>org.apache.activemq.shiro</Bundle-SymbolicName>
-                        <Export-Package>org.apache.activemq.shiro*;version=${project.version};-noimport:=true;-split-package:=merge-first</Export-Package>
+                        <Export-Package>org.apache.activemq.shiro*;version=${upstream.version};-noimport:=true;-split-package:=merge-first</Export-Package>
                         <Import-Package>
-                            org.apache.activemq*;version=${project.version};resolution:=optional,
+                            org.apache.activemq*;version=${upstream.version};resolution:=optional,
                             org.apache.shiro*;version="[1.2,2]",
                             *
                         </Import-Package>
