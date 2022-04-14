@@ -42,8 +42,11 @@
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
     <activemq-karaf.features.tesb.version>5.16.4.20220422</activemq-karaf.features.tesb.version>
+    <activemq-web-console.tesb.version>5.15.16.4.20220422</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.13.2</jackson.tesb.version>
     <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
+    <spring.tesb.version>5.3.18</spring.tesb.version>
+    <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -760,43 +763,43 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-aop</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-expression</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jms</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-tx</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <!--
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
         <exclusions>
           <exclusion>
             <groupId>javax.mail</groupId>
@@ -836,22 +839,22 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-oxm</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
 
       <!-- Optional Derby support-->
@@ -1122,8 +1125,11 @@
               <my.custom.property>${my.custom.property}</my.custom.property>
               -->
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
+              <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+              <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
             </properties>
           </configuration>
           <executions>
