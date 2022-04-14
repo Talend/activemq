@@ -28,9 +28,11 @@
   <artifactId>activemq-karaf</artifactId>
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Apache Karaf</name>
+  <version>${revision}</version>
   <description>Provides resources for running ActiveMQ in Apache Karaf</description>
 
   <properties>
+    <revision>${activemq-karaf.features.tesb.version}</revision>
     <xpp3-bundle-version>1.1.4c_5</xpp3-bundle-version>
     <jodatime-bundle-version>2.9</jodatime-bundle-version>
     <dom4j-bundle-version>1.6.1_2</dom4j-bundle-version>
@@ -85,18 +87,22 @@
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-http</artifactId>
+      <version>${upstream.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-log4j-appender</artifactId>
+      <version>${upstream.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-console</artifactId>
+      <version>${upstream.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>activemq-pool</artifactId>
+      <version>${upstream.version}</version>
     </dependency>
     <!-- used for testing -->
     <dependency>
