@@ -20,7 +20,7 @@
 
 <features name="activemq-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
-    <repository>mvn:org.apache.activemq/activemq-karaf/${upstream.version}/xml/features-core</repository>
+    <repository>mvn:org.apache.activemq/activemq-karaf/${activemq-karaf.features.tesb.version}/xml/features-core</repository>
 
     <!-- Starts the broker with default configuration -->
     <feature name="activemq-broker-noweb" description="Full ActiveMQ broker with default configuration" version="${upstream.version}">
