@@ -32,7 +32,7 @@
 
   <properties>
     <upstream.version>5.15.9</upstream.version>
-    <activemq-karaf.tesb.version>5.15.9.tesb1</activemq-karaf.tesb.version>
+    <activemq-karaf.tesb.version>5.15.9.tesb2</activemq-karaf.tesb.version>
     <activemq-web-console.tesb.version>5.15.9.tesb1</activemq-web-console.tesb.version>
 
     <activeio-version>3.1.4</activeio-version>

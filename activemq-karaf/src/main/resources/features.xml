@@ -47,10 +47,10 @@
     </feature>
 
     <feature name="activemq-web-console" version="${upstream.version}" resolver="(obr)" start-level="50">
-      <feature start-level="10">war</feature>
+      <!-- <feature start-level="10">war</feature>
       <feature start-level="10">eventadmin</feature>
       <configfile finalname="/etc/org.apache.activemq.webconsole.cfg">mvn:org.apache.activemq/activemq-karaf/${activemq-karaf.tesb.version}/cfg/activemq-webconsole</configfile>
-      <bundle>mvn:org.apache.activemq/activemq-web-console/${activemq-web-console.tesb.version}/war</bundle>
+      <bundle>mvn:org.apache.activemq/activemq-web-console/${activemq-web-console.tesb.version}/war</bundle> -->
     </feature>
 
     <feature name="activemq-blueprint" version="${upstream.version}" resolver="(obr)" start-level="50">
