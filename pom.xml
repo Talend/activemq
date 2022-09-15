@@ -41,11 +41,14 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.16.4.20220422</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.16.4.20220915</activemq-karaf.features.tesb.version>
     <activemq-web-console.tesb.version>5.15.16.4.20220422</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.13.2</jackson.tesb.version>
     <jackson-databind.tesb.version>2.13.2.2</jackson-databind.tesb.version>
-    <spring.tesb.version>5.3.18</spring.tesb.version>
+    <netty.tesb.version>4.1.77.Final</netty.tesb.version>
+    <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
+    <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
+    <spring.tesb.version>5.3.21</spring.tesb.version>
     <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
@@ -1128,6 +1131,9 @@
               <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
+              <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+              <qpid-jms-netty.tesb.version>${qpid-jms-netty.tesb.version}</qpid-jms-netty.tesb.version>
+              <netty-all.tesb.version>${netty-all.tesb.version}</netty-all.tesb.version>
               <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
               <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
             </properties>
