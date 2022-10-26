@@ -41,7 +41,7 @@
     <activemq-karaf.features.tesb.version>5.15.15.tesb6</activemq-karaf.features.tesb.version>
     <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.13.4</jackson.tesb.version>
-    <jackson.databind.tesb.version>2.13.4.2</jackson.databind.tesb.version>
+    <jackson-databind.tesb.version>2.13.4.2</jackson-databind.tesb.version>
     <xstream-bundle.tesb.version>1.4.19_1</xstream-bundle.tesb.version>
     <xstream.tesb.version>1.4.19</xstream.tesb.version>
     <slf4j.tesb.version>1.7.36</slf4j.tesb.version>
@@ -681,7 +681,7 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>${jackson.databind.tesb.version}</version>
+        <version>${jackson-databind.tesb.version}</version>
       </dependency>
 
       <!-- Used to configure the activemq logs -->
@@ -1157,7 +1157,7 @@
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
               <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
-              <jackson.databind.tesb.version>${jackson.databind.tesb.version}</jackson.databind.tesb.version>
+              <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
               <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
               <xstream.tesb.version>${xstream.tesb.version}</xstream.tesb.version>
               <slf4j.tesb.version>${slf4j.tesb.version}</slf4j.tesb.version>
