@@ -28,9 +28,11 @@
   <artifactId>activemq-karaf</artifactId>
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Apache Karaf</name>
+  <version>${revision}</version>
   <description>Provides resources for running ActiveMQ in Apache Karaf</description>
 
   <properties>
+    <revision>${activemq-karaf.features.tesb.version}</revision>
     <xpp3-bundle-version>1.1.4c_5</xpp3-bundle-version>
     <dom4j-bundle-version>1.6.1_2</dom4j-bundle-version>
     <xstream-bundle-version>1.4.17_1</xstream-bundle-version>
