@@ -18,11 +18,11 @@
 
 -->
 
-<features name="activemq-core-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
+<features name="activemq-core-${upstream.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
     <!-- Bundles needed if only client will be deployed in the container -->
-    <feature name="activemq-client" description="ActiveMQ client libraries" version="${project.version}">
-        <feature version="[5,6)">spring</feature>
+    <feature name="activemq-client" description="ActiveMQ client libraries" version="${upstream.version}">
+        <feature version="${spring.tesb.version-range}">spring</feature>
         <feature>aries-blueprint</feature>
         <feature>activemq-combined-jms-spec</feature>
         <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-annotation_1.3_spec/1.0</bundle>
@@ -32,20 +32,20 @@
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-runtime/${jaxb-bundle-version}</bundle>
         <bundle>mvn:org.apache.commons/commons-pool2/${commons-pool2-version}</bundle>
         <!-- uber osgi bundle means client is not that lean, todo: introduce client osgi bundle -->
-        <bundle>mvn:org.apache.activemq/activemq-osgi/${project.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-osgi/${upstream.version}</bundle>
     </feature>
     
-    <feature name="activemq-cf" description="ActiveMQ ConnectionFactory from config" version="${project.version}">
+    <feature name="activemq-cf" description="ActiveMQ ConnectionFactory from config" version="${upstream.version}">
         <feature>activemq-client</feature>
         <feature>scr</feature>
-        <bundle>mvn:org.apache.activemq/activemq-cf/${project.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-cf/${upstream.version}</bundle>
     </feature>
 
     <!-- All bundles needed by the broker -->
-    <feature name="activemq" description="ActiveMQ broker libraries" version="${project.version}">
+    <feature name="activemq" description="ActiveMQ broker libraries" version="${upstream.version}">
       <feature>connector</feature>
       <feature>http</feature>
-      <feature version="${project.version}">activemq-client</feature>
+      <feature version="${upstream.version}">activemq-client</feature>
       <bundle dependency="true">mvn:commons-io/commons-io/${commons-io-version}</bundle>
       <bundle dependency="true">mvn:commons-collections/commons-collections/${commons-collections-version}</bundle>
       <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang-version}</bundle>
@@ -58,10 +58,10 @@
       <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/${xstream-bundle-version}</bundle>
       <bundle dependency="true">mvn:org.apache.aries/org.apache.aries.util/${aries-version}</bundle>
       <bundle dependency="true">mvn:org.apache.activemq/activeio-core/${activeio-version}</bundle>
-      <bundle dependency="true">mvn:org.codehaus.jettison/jettison/${jettison-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson-version}</bundle>
+      <bundle dependency="true">mvn:org.codehaus.jettison/jettison/${jettison.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
     </feature>
 
     <!-- JMS1.1 and JMS2.0 support via the same Geronimo JMS 2 bundle  -->
