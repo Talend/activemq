@@ -1,6 +1,5 @@
 @Library('esb') _
 
 Fork(
-        MVN_MODULES: ':activemq-karaf',
-        USE_JAVA11: 'true'
+        MVN_MODULES: ':activemq-karaf'
 )
