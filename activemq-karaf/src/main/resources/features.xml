@@ -55,11 +55,8 @@
         Don't forget to bind Karaf JMX server to 0.0.0.0 to have a functional webconsole:
         In etc/org.apache.karaf.management.cfg, both rmiRegistryHost and rmiServerHost should use 0.0.0.0
     -->
+    <!-- Commented out and kept as empty feature due to security risks -->
     <feature name="activemq-web-console" version="${upstream.version}">
-      <feature>war</feature>
-      <feature>eventadmin</feature>
-      <configfile finalname="${karaf.etc}/org.apache.activemq.webconsole.cfg">mvn:org.apache.activemq/activemq-karaf/${upstream.version}/cfg/activemq-webconsole</configfile>
-      <bundle>mvn:org.apache.activemq/activemq-web-console/${activemq-web-console.tesb.version}/war</bundle>
     </feature>
 
     <feature name="activemq-blueprint" version="${upstream.version}">
