@@ -38,18 +38,19 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.15.15.tesb7</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.15.tesb8</activemq-karaf.features.tesb.version>
     <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.14.1</jackson.tesb.version>
     <jackson-databind.tesb.version>2.14.1</jackson-databind.tesb.version>
-    <xstream-bundle.tesb.version>1.4.19_1</xstream-bundle.tesb.version>
-    <xstream.tesb.version>1.4.19</xstream.tesb.version>
+    <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
+    <xstream.tesb.version>1.4.20</xstream.tesb.version>
     <slf4j.tesb.version>1.7.36</slf4j.tesb.version>
     <reload4j.tesb.version>1.2.19</reload4j.tesb.version>
     <spring-tesb-version-range>[5.2,6)</spring-tesb-version-range>
     <qpid-jms-netty.tesb.version>4.1.85.Final</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>4.1.85.Final</netty-all.tesb.version>
     <jettison.tesb.version>1.5.3</jettison.tesb.version>
+    <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -1166,6 +1167,7 @@
               <qpid-jms-netty.tesb.version>${qpid-jms-netty.tesb.version}</qpid-jms-netty.tesb.version>
               <netty-all.tesb.version>${netty-all.tesb.version}</netty-all.tesb.version>
               <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
+              <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version>
             </properties>
           </configuration>
           <executions>
