@@ -45,7 +45,7 @@
     <activemq-web-console.tesb.version>5.15.16.4.20220422</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.14.1</jackson.tesb.version>
     <jackson-databind.tesb.version>2.14.1</jackson-databind.tesb.version>
-    <jettison.tesb.version>1.5.3</jettison.tesb.version>
+    <jettison.tesb.version>1.5.4</jettison.tesb.version>
     <netty.tesb.version>4.1.85.Final</netty.tesb.version>
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
