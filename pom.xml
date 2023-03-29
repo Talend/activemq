@@ -49,7 +49,7 @@
     <spring-tesb-version-range>[5.2,6)</spring-tesb-version-range>
     <qpid-jms-netty.tesb.version>4.1.85.Final</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>4.1.85.Final</netty-all.tesb.version>
-    <jettison.tesb.version>1.5.3</jettison.tesb.version>
+    <jettison.tesb.version>1.5.4</jettison.tesb.version>
     <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
 
     <!-- JAR dependency versions -->
