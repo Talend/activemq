@@ -46,7 +46,7 @@
     <jackson.tesb.version>2.14.1</jackson.tesb.version>
     <jackson-databind.tesb.version>2.14.1</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
-    <netty.tesb.version>4.1.85.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.86.Final</netty.tesb.version>
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
     <spring.tesb.version>5.3.21</spring.tesb.version>
