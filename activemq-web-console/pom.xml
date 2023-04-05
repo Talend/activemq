@@ -28,9 +28,11 @@
   <artifactId>activemq-web-console</artifactId>
   <packaging>war</packaging>
   <name>ActiveMQ :: Web Console</name>
+  <version>${revision}</version>
   <description>Web Console for ActiveMQ</description>
 
   <properties>
+    <revision>${activemq-web-console.tesb.version}</revision>
     <jetty.port>8080</jetty.port>
     <jetty.maven.groupid>org.eclipse.jetty</jetty.maven.groupid>
   </properties>
@@ -252,7 +254,7 @@
       <artifactId>jetty-server</artifactId>
       <scope>test</scope>
     </dependency>
-     <dependency>
+    <dependency>
       <groupId>org.eclipse.jdt</groupId>
       <artifactId>ecj</artifactId>
       <version>${ecj.version}</version>
@@ -272,13 +274,13 @@
     </dependency>
 
     <!-- JSTL support -->
-    
+
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>apache-jstl</artifactId>
       <scope>provided</scope>
     </dependency>
-    
+
      <!-- Tag Libs -->
     <dependency>
       <groupId>org.apache.taglibs</groupId>
@@ -290,7 +292,7 @@
       <artifactId>taglibs-standard-impl</artifactId>
       <scope>provided</scope>
     </dependency>
-    
+
     <!-- used for testing -->
     <dependency>
       <groupId>junit</groupId>
@@ -310,7 +312,7 @@
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>apache-jsp</artifactId>
@@ -322,17 +324,17 @@
           </exclusion>
       </exclusions>
     </dependency>
-    
-     <dependency>
+
+    <dependency>
        <groupId>org.apache.geronimo.specs</groupId>
        <artifactId>geronimo-annotation_1.3_spec</artifactId>
     </dependency>
 
-	<dependency>
-		<groupId>org.ow2.asm</groupId>
-		<artifactId>asm</artifactId>
-    <scope>provided</scope>
-	</dependency>
+    <dependency>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+        <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>osgi.core</artifactId>
