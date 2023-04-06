@@ -80,7 +80,7 @@
       <bundle>mvn:io.netty/netty-codec-http/${qpid-jms-netty.tesb.version}</bundle>
       <bundle>mvn:io.netty/netty-handler/${netty-all.tesb.version}</bundle>
       <bundle>mvn:io.netty/netty-resolver/${netty-all.tesb.version}</bundle>
-      <bundle>mvn:org.apache.qpid/proton-j/${qpid-jms-proton-version}</bundle>
+      <bundle>mvn:org.apache.qpid/proton-j/${qpid-proton-version}</bundle>
       <bundle>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-version}</bundle>
     </feature>
 
