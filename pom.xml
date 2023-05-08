@@ -1121,7 +1121,7 @@
               -->
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
-              <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
+              <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
               <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
               <!-- <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version> -->
               <xstream.tesb.version>${xstream.tesb.version}</xstream.tesb.version>
