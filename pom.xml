@@ -49,11 +49,12 @@
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.20</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-    <netty.tesb.version>4.1.85.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.89.Final</netty.tesb.version>
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
-    <spring.tesb.version>5.3.26</spring.tesb.version>
-    <spring.tesb.version-range>[5.2,6)</spring.tesb.version-range>
+    <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
+    <spring.tesb.version>5.3.27</spring.tesb.version>
+    <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -1129,6 +1130,7 @@
               <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
               <qpid-jms-netty.tesb.version>${qpid-jms-netty.tesb.version}</qpid-jms-netty.tesb.version>
               <netty-all.tesb.version>${netty-all.tesb.version}</netty-all.tesb.version>
+              <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
               <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
               <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
             </properties>
