@@ -29,8 +29,10 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: OSGi bundle</name>
   <description>Puts together an ActiveMQ OSGi bundle</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-osgi.tesb.version}</revision>
     <surefire.argLine>-Xmx512M</surefire.argLine>
   </properties>
 

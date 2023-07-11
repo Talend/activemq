@@ -41,8 +41,10 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.17.4.20230330</activemq-karaf.features.tesb.version>
-    <activemq-web-console.tesb.version>5.17.4.20230330</activemq-web-console.tesb.version>
+    <activemq-karaf.features.tesb.version>5.17.4.20230530</activemq-karaf.features.tesb.version>
+    <activemq-osgi.tesb.version>5.17.4.20230530</activemq-osgi.tesb.version>
+    <activemq-pool.tesb.version>5.17.4.20230530</activemq-pool.tesb.version>
+    <activemq-web-console.tesb.version>5.17.4.20230530</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.14.1</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
@@ -1121,6 +1123,9 @@
               <my.custom.property>${my.custom.property}</my.custom.property>
               -->
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
+              <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
+              <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
               <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
