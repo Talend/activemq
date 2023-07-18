@@ -51,7 +51,7 @@
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.20</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-    <netty.tesb.version>4.1.92.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.94.Final</netty.tesb.version>
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
