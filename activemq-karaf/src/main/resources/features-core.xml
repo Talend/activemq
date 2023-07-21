@@ -32,7 +32,7 @@
         <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-runtime/${jaxb-bundle.tesb.version}</bundle>
         <bundle>mvn:org.apache.commons/commons-pool2/${commons-pool2-version}</bundle>
         <!-- uber osgi bundle means client is not that lean, todo: introduce client osgi bundle -->
-        <bundle>mvn:org.apache.activemq/activemq-osgi/${upstream.version}</bundle>
+        <bundle>mvn:org.apache.activemq/activemq-osgi/${activemq-osgi.tesb.version}</bundle>
     </feature>
     
     <feature name="activemq-cf" description="ActiveMQ ConnectionFactory from config" version="${upstream.version}">
