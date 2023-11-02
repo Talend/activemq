@@ -25,21 +25,21 @@
 
   <groupId>org.apache.activemq</groupId>
   <artifactId>activemq-parent</artifactId>
-  <version>5.15.15</version>
+  <version>5.15.16</version>
   <packaging>pom</packaging>
   <name>ActiveMQ</name>
   <inceptionYear>2005</inceptionYear>
 
   <properties>
-    <upstream.version>5.15.15</upstream.version>
+    <upstream.version>5.15.16</upstream.version>
     <activeio-version>3.1.4</activeio-version>
     <siteId>activemq-${upstream.version}</siteId>
     <projectName>Apache ActiveMQ</projectName>
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.15.15.tesb9</activemq-karaf.features.tesb.version>
-    <activemq-web-console.tesb.version>5.15.15.tesb1</activemq-web-console.tesb.version>
+    <activemq-karaf.features.tesb.version>5.15.16.tesb1</activemq-karaf.features.tesb.version>
+    <activemq-web-console.tesb.version>5.15.16.tesb1</activemq-web-console.tesb.version>
     <jackson.tesb.version>2.14.1</jackson.tesb.version>
     <jackson-databind.tesb.version>2.14.1</jackson-databind.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
@@ -47,7 +47,7 @@
     <slf4j.tesb.version>1.7.36</slf4j.tesb.version>
     <reload4j.tesb.version>1.2.19</reload4j.tesb.version>
     <spring-tesb-version-range>[5.2,6)</spring-tesb-version-range>
-    <qpid-jms-netty.tesb.version>4.1.86.Final</qpid-jms-netty.tesb.version>
+    <qpid-jms-netty.tesb.version>4.1.100.Final</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>4.1.100.Final</netty-all.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
     <commons-net.tesb.version>3.9.0</commons-net.tesb.version>
