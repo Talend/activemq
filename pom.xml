@@ -131,7 +131,7 @@
     <scala-version>2.11.11</scala-version>
     <shiro-version>1.7.1</shiro-version>
     <scalatest-version>3.0.8</scalatest-version>
-    <slf4j-version>1.7.30</slf4j-version>
+    <slf4j-version>1.7.32</slf4j-version>
     <snappy-version>1.1.2</snappy-version>
     <spring-version>4.3.30.RELEASE</spring-version>
     <taglibs-version>1.2.5</taglibs-version>
@@ -140,10 +140,10 @@
     <xmlbeans-version>3.1.0</xmlbeans-version>
     <xmlbeans-bundle-version>2.6.0_2</xmlbeans-bundle-version>
     <xpp3-version>1.1.4c</xpp3-version>
-    <xstream-version>1.4.16</xstream-version>
-    <xbean-version>4.18</xbean-version>
-    <xerces-version>2.12.0</xerces-version>
-    <jaxb-basics-version>0.6.4</jaxb-basics-version>
+    <xstream-version>1.4.18</xstream-version>
+    <xbean-version>4.20</xbean-version>
+    <xerces-version>2.12.2</xerces-version>
+    <jaxb-basics-version>0.12.0</jaxb-basics-version>
     <stompjms-version>1.19</stompjms-version>
 
     <pax-exam-version>4.13.1</pax-exam-version>
@@ -339,6 +339,13 @@
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-client</artifactId>
         <version>${upstream.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-client</artifactId>
+        <version>${upstream.version}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
