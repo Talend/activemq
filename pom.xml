@@ -41,11 +41,11 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.17.6.20231204</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.17.6.20240209</activemq-karaf.features.tesb.version>
     <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
     <activemq-web-console.tesb.version>5.17.6.20231031</activemq-web-console.tesb.version>
-    <jackson.tesb.version>2.14.3</jackson.tesb.version>
+    <jackson.tesb.version>2.16.0</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
@@ -55,7 +55,7 @@
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
-    <spring.tesb.version>5.3.30</spring.tesb.version>
+    <spring.tesb.version>5.3.31</spring.tesb.version>
     <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
