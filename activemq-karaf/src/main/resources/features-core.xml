@@ -69,6 +69,6 @@
     <!-- Fortunately, JMS2.0 is fully backward compatible with JMS 1.1 -->
     <feature name="activemq-combined-jms-spec">
         <feature prerequisite="true">wrap</feature>
-        <bundle dependency="true">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
+        <bundle start-level="10" dependency="true">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_2.0_spec/1.0-alpha-2$overwrite=merge&amp;Bundle-Version=${geronimo-jms2-bundle-override.tesb.version}&amp;Export-Package=javax.jms;version=1.1,javax.jms;version=2.0</bundle>
     </feature>
 </features>

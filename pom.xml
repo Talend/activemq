@@ -42,9 +42,11 @@
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
     <activemq-karaf.features.tesb.version>5.17.6.20240209</activemq-karaf.features.tesb.version>
+    <activemq-karaf.tesb.version>§{activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
     <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
     <activemq-web-console.tesb.version>5.17.6.20231031</activemq-web-console.tesb.version>
+    <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.16.0</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
@@ -1130,9 +1132,11 @@
               <my.custom.property>${my.custom.property}</my.custom.property>
               -->
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-karaf.tesb.version>§{activemq-karaf.tesb.version}</activemq-karaf.tesb.version>
               <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
               <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
               <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
+              <geronimo-jms2-bundle-override.tesb.version>${geronimo-jms2-bundle-override.tesb.version}</geronimo-jms2-bundle-override.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
               <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
               <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version>
