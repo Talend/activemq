@@ -50,7 +50,7 @@
     <jackson.tesb.version>2.16.0</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
-    <commons-codec.tesb.version>2.17.0</commons-codec.tesb.version>
+    <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
     <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
     <commons-lang.tesb.version>3.14.0</commons-lang.tesb.version>
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
