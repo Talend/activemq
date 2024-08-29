@@ -205,7 +205,7 @@
           <excludes>
           </excludes>
           <systemPropertyVariables>
-            <activemqVersion>${project.version}</activemqVersion>
+            <activemqVersion>${upstream.version}</activemqVersion>
             <karafVersion>${karaf-version}</karafVersion>
           </systemPropertyVariables>
         </configuration>
@@ -287,7 +287,7 @@
               -->
               <argLine>-Dorg.ops4j.pax.url.mvn.localRepository=${maven.repo.local}</argLine>
               <systemPropertyVariables>
-                <activemqVersion>${project.version}</activemqVersion>
+                <activemqVersion>${upstream.version}</activemqVersion>
                 <karafVersion>${karaf-version}</karafVersion>
                 <felixFrameworkVersion>${felix-framework-version}</felixFrameworkVersion>
               </systemPropertyVariables>
