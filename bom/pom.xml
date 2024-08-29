@@ -35,142 +35,142 @@
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-all</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-amqp</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-blueprint</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-broker</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-client</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-console</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-http</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-jaas</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-jdbc-store</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-kahadb-store</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-karaf</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-jms-pool</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-log4j-appender</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-mqtt</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
              <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-pool</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-openwire-generator</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-openwire-legacy</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-osgi</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-ra</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-rar</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-run</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-runtime-config</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-shiro</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-spring</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-stomp</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-web</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-web-console</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-web-demo</artifactId>
-                <version>${project.version}</version>
+                <version>${upstream.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

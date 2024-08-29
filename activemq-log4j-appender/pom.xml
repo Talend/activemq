@@ -103,7 +103,7 @@
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Fragment-Host>org.apache.activemq.activemq-core</Fragment-Host>
             <Export-Package>
-              org.apache.activemq.transport.util*;version=${project.version};-noimport:=;-split-package:=merge-last,
+              org.apache.activemq.transport.util*;version=${upstream.version};-noimport:=;-split-package:=merge-last,
             </Export-Package>
           </instructions>
         </configuration>
