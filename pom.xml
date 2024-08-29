@@ -31,6 +31,7 @@
   <inceptionYear>2005</inceptionYear>
 
   <properties>
+    <upstream.version>6.1.3</upstream.version>
     <!-- for reproducible builds -->	
     <project.build.outputTimestamp>2024-07-31T15:29:04Z</project.build.outputTimestamp>
 
@@ -38,6 +39,26 @@
     <projectName>Apache ActiveMQ</projectName>
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
+
+    <activemq-karaf.features.tesb.version>6.1.3.20240820</activemq-karaf.features.tesb.version>
+    <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
+    <activemq-osgi.tesb.version>6.1.3.20240820</activemq-osgi.tesb.version>
+    <activemq-pool.tesb.version>6.1.3.20240820</activemq-pool.tesb.version>
+    <activemq-web-console.tesb.version>6.1.3.20240820</activemq-web-console.tesb.version>
+    <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
+    <jackson.tesb.version>2.17.2</jackson.tesb.version>
+    <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
+    <!-- <jettison.tesb.version>1.5.4</jettison.tesb.version> -->
+    <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
+    <!-- <commons-io.tesb.version>2.16.1</commons-io.tesb.version> -->
+    <!-- <commons-lang.tesb.version>3.14.0</commons-lang.tesb.version> -->
+    <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
+    <xstream.tesb.version>1.4.20</xstream.tesb.version>
+    <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
+    <netty.tesb.version>4.1.111.Final</netty.tesb.version>
+    <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
+    <spring.tesb.version>6.1.11</spring.tesb.version>
+    <spring.tesb.version-range>[5.3,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>
@@ -604,22 +625,22 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>${jackson-version}</version>
+        <version>${jackson.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
-        <version>${jackson-version}</version>
+        <version>${jackson.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>${jackson-version}</version>
+        <version>${jackson-databind.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-xml</artifactId>
-        <version>${jackson-version}</version>
+        <version>${jackson.tesb.version}</version>
       </dependency>
 
       <!-- Used to configure the activemq logs -->
@@ -686,43 +707,43 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-aop</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-expression</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jms</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-tx</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <!--
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
         <exclusions>
           <exclusion>
             <groupId>javax.mail</groupId>
@@ -762,22 +783,22 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-oxm</artifactId>
-        <version>${spring-version}</version>
+        <version>${spring.tesb.version}</version>
       </dependency>
 
       <!-- Optional Derby support-->
@@ -838,7 +859,7 @@
       <dependency>
         <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
-        <version>${xstream-version}</version>
+        <version>${xstream.tesb.version}</version>
         <exclusions>
           <exclusion>
             <!-- xom is an optional dependency of xstream. Its also
@@ -1000,6 +1021,53 @@
     <defaultGoal>test</defaultGoal>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>io.paradoxical</groupId>
+          <artifactId>resolved-pom-maven-plugin</artifactId>
+          <version>1.0</version>
+          <configuration>
+            <properties>
+              <revision>${revision}</revision>
+              <upstream.version>${upstream.version}</upstream.version>
+
+              <!-- ADD HERE ALL THE CUSTOM PROPERTIES declared in the above <properties> part -->
+              <!-- something like :
+              <my.custom.property>${my.custom.property}</my.custom.property>
+              -->
+              <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
+              <activemq-karaf.tesb.version>§{activemq-karaf.tesb.version}</activemq-karaf.tesb.version>
+              <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
+              <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
+              <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
+              <geronimo-jms2-bundle-override.tesb.version>${geronimo-jms2-bundle-override.tesb.version}</geronimo-jms2-bundle-override.tesb.version>
+              <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>
+              <jackson-databind.tesb.version>${jackson-databind.tesb.version}</jackson-databind.tesb.version>
+              <!-- <jettison.tesb.version>${jettison.tesb.version}</jettison.tesb.version> -->
+              <commons-codec.tesb.version>${commons-codec.tesb.version}</commons-codec.tesb.version>
+              <!-- <commons-io.tesb.version>${commons-io.tesb.version}</commons-io.tesb.version> -->
+              <!-- <commons-lang.tesb.version>${commons-lang.tesb.version}</commons-lang.tesb.version> -->
+              <!-- <commons-net.tesb.version>${commons-net.tesb.version}</commons-net.tesb.version> -->
+              <xstream.tesb.version>${xstream.tesb.version}</xstream.tesb.version>
+              <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
+              <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+              <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
+              <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
+              <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
+            </properties>
+          </configuration>
+          <executions>
+            <execution>
+              <id>resolve-my-pom</id>
+              <phase>initialize</phase>
+              <goals>
+                <goal>resolve-pom</goal>
+              </goals>
+              <configuration>
+                <resolvedPomFile>.resolved-pom.xml</resolvedPomFile>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
         <plugin>
           <groupId>org.apache.activemq.protobuf</groupId>
           <artifactId>activemq-protobuf</artifactId>
@@ -1236,6 +1304,10 @@
     </pluginManagement>
 
     <plugins>
+      <plugin>
+        <groupId>io.paradoxical</groupId>
+        <artifactId>resolved-pom-maven-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

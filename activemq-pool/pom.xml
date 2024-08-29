@@ -29,6 +29,11 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Pool</name>
   <description>ActiveMQ Pooled ConnectionFactory</description>
+  <version>${revision}</version>
+
+  <properties>
+    <revision>${activemq-pool.tesb.version}</revision>
+  </properties>
 
   <dependencies>
 
