@@ -62,16 +62,16 @@
     </feature>
 
     <feature name="activemq-amqp-client" version="${upstream.version}" description="ActiveMQ AMQP protocol client libraries">
-      <bundle>mvn:io.netty/netty-common/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-transport/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-transport-native-kqueue/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-buffer/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-codec/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-codec-http/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-handler/${netty.tesb.verson}</bundle>
-      <bundle>mvn:io.netty/netty-resolver/${netty.tesb.verson}</bundle>
+      <bundle>mvn:io.netty/netty-common/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-transport/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-transport-native-epoll/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-transport-native-kqueue/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-transport-native-unix-common/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-buffer/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-codec/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-codec-http/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-handler/${netty.tesb.version}</bundle>
+      <bundle>mvn:io.netty/netty-resolver/${netty.tesb.version}</bundle>
       <bundle>mvn:org.apache.qpid/proton-j/${qpid-proton-version}</bundle>
       <bundle>mvn:org.apache.qpid/qpid-jms-client/${qpid-jms-version}</bundle>
     </feature>
