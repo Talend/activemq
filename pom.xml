@@ -54,7 +54,7 @@
     <!-- <commons-io.tesb.version>2.16.1</commons-io.tesb.version> -->
     <!-- <commons-lang.tesb.version>3.14.0</commons-lang.tesb.version> -->
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
-    <xstream.tesb.version>1.4.20</xstream.tesb.version>
+    <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
     <netty.tesb.version>4.1.111.Final</netty.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
