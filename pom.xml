@@ -41,22 +41,22 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>5.17.6.20240725</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>5.17.6.20250110</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
     <activemq-osgi.tesb.version>5.17.6.20231031</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>5.17.6.20231031</activemq-pool.tesb.version>
     <activemq-web-console.tesb.version>5.17.6.20231031</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
-    <jackson.tesb.version>2.16.0</jackson.tesb.version>
+    <jackson.tesb.version>2.17.2</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <jettison.tesb.version>1.5.4</jettison.tesb.version>
     <commons-codec.tesb.version>1.17.0</commons-codec.tesb.version>
     <commons-io.tesb.version>2.16.1</commons-io.tesb.version>
-    <commons-lang.tesb.version>3.14.0</commons-lang.tesb.version>
+    <commons-lang.tesb.version>3.17.0</commons-lang.tesb.version>
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
-    <xstream.tesb.version>1.4.20</xstream.tesb.version>
+    <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-    <netty.tesb.version>4.1.111.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.115.Final</netty.tesb.version>
     <qpid-jms-netty.tesb.version>${netty.tesb.version}</qpid-jms-netty.tesb.version>
     <netty-all.tesb.version>${netty.tesb.version}</netty-all.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
