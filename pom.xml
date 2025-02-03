@@ -56,7 +56,7 @@
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-    <netty.tesb.version>4.1.111.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.115.Final</netty.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
     <spring.tesb.version>5.3.39</spring.tesb.version>
     <spring.tesb.version-range>[5.2,7)</spring.tesb.version-range>
