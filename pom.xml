@@ -25,13 +25,13 @@
 
   <groupId>org.apache.activemq</groupId>
   <artifactId>activemq-parent</artifactId>
-  <version>6.1.3</version>
+  <version>6.1.6</version>
   <packaging>pom</packaging>
   <name>ActiveMQ</name>
   <inceptionYear>2005</inceptionYear>
 
   <properties>
-    <upstream.version>6.1.3</upstream.version>
+    <upstream.version>6.1.6</upstream.version>
     <!-- for reproducible builds -->	
     <project.build.outputTimestamp>2024-07-31T15:29:04Z</project.build.outputTimestamp>
 
@@ -40,11 +40,11 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.1.3.20240820</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.1.6.20240820</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
-    <activemq-osgi.tesb.version>6.1.3.20240820</activemq-osgi.tesb.version>
-    <activemq-pool.tesb.version>6.1.3.20240820</activemq-pool.tesb.version>
-    <activemq-web-console.tesb.version>6.1.3.20240820</activemq-web-console.tesb.version>
+    <activemq-osgi.tesb.version>6.1.6.20240820</activemq-osgi.tesb.version>
+    <activemq-pool.tesb.version>6.1.6.20240820</activemq-pool.tesb.version>
+    <activemq-web-console.tesb.version>6.1.6.20240820</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.17.2</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
@@ -265,7 +265,7 @@
     <connection>scm:git:http://gitbox.apache.org/repos/asf/activemq.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/activemq.git</developerConnection>
     <url>https://github.com/apache/activemq</url>
-    <tag>activemq-6.1.3</tag>
+    <tag>activemq-6.1.6</tag>
   </scm>
 
   <dependencyManagement>
