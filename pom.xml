@@ -40,11 +40,11 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.1.6.20240820</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.1.6.20250310</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
-    <activemq-osgi.tesb.version>6.1.6.20240820</activemq-osgi.tesb.version>
-    <activemq-pool.tesb.version>6.1.6.20240820</activemq-pool.tesb.version>
-    <activemq-web-console.tesb.version>6.1.6.20240820</activemq-web-console.tesb.version>
+    <activemq-osgi.tesb.version>6.1.6.20250310</activemq-osgi.tesb.version>
+    <activemq-pool.tesb.version>6.1.6.20250310</activemq-pool.tesb.version>
+    <activemq-web-console.tesb.version>6.1.6.20250310</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.18.3</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
@@ -58,7 +58,7 @@
     <netty.tesb.version>4.1.118.Final</netty.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
     <spring.tesb.version>6.1.16</spring.tesb.version>
-    <spring.tesb.version-range>[5.3,7)</spring.tesb.version-range>
+    <spring.tesb.version-range>[6.1,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
     <activemq-protobuf-version>1.1</activemq-protobuf-version>

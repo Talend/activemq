@@ -22,11 +22,12 @@
 
     <!-- Bundles needed if only client will be deployed in the container -->
     <feature name="activemq-client" description="ActiveMQ client libraries" version="${upstream.version}">
-        <feature version="${spring.tesb.version-range">spring</feature>
+        <feature prerequisite="true">wrap</feature>
+        <feature version="${spring.tesb.version-range}">spring</feature>
         <feature>aries-blueprint</feature>
         <feature>activemq-combined-jms-spec</feature>
         <bundle>mvn:jakarta.activation/jakarta.activation-api/2.1.2</bundle>
-        <bundle>mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.0</bundle>
+        <bundle>wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40</bundle>
         <bundle>mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
         <bundle>mvn:jakarta.activation/jakarta.activation-api/2.1.2</bundle>
         <bundle>mvn:jakarta.annotation/jakarta.annotation-api/2.1.1</bundle>
