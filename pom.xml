@@ -56,6 +56,7 @@
     <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
     <netty.tesb.version>4.1.118.Final</netty.tesb.version>
+    <qpid-jms.tesb.version>2.5.0</qpid-jms.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
     <spring.tesb.version>6.1.16</spring.tesb.version>
     <spring.tesb.version-range>[6.1,7)</spring.tesb.version-range>
@@ -1053,6 +1054,7 @@
               <xstream.tesb.version>${xstream.tesb.version}</xstream.tesb.version>
               <xstream-bundle.tesb.version>${xstream-bundle.tesb.version}</xstream-bundle.tesb.version>
               <netty.tesb.version>${netty.tesb.version}</netty.tesb.version>
+              <qpid-jms.tesb.version>${qpid-jms.tesb.version}</qpid-jms.tesb.version>
               <jaxb-bundle.tesb.version>${jaxb-bundle.tesb.version}</jaxb-bundle.tesb.version>
               <spring.tesb.version>${spring.tesb.version}</spring.tesb.version>
               <spring.tesb.version-range>${spring.tesb.version-range}</spring.tesb.version-range>
