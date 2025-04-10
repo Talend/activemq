@@ -29,6 +29,11 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Blueprint</name>
   <description>The ActiveMQ Message Broker and Client implementations</description>
+  <version>${revision}</version>
+
+  <properties>
+    <revision>${activemq-blueprint.tesb.version}</revision>
+  </properties>
 
     <dependencies>
         <dependency>
@@ -58,7 +63,7 @@
                       org.apache.aries.blueprint.*;version="[1.0,2)",
                       *
                   </Import-Package>
-                  <Fragment-Host>org.apache.activemq.activemq-osgi</Fragment-Host>
+                  <Fragment-Host>org.apache.activemq.osgi</Fragment-Host>
                   <_noee>true</_noee>
               </instructions>
           </configuration>

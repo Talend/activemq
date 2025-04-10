@@ -140,6 +140,7 @@
         <inherited>true</inherited>
         <configuration>
           <instructions>
+            <Bundle-SymbolicName>org.apache.activemq.osgi</Bundle-SymbolicName>
             <Bundle-Activator>org.apache.activemq.util.osgi.Activator</Bundle-Activator>
             <Embed-Dependency>
               *;groupId=org.apache.activemq;inline=META-INF/services/*,
