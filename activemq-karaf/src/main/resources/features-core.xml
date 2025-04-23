@@ -26,7 +26,7 @@
         <feature version="${spring.tesb.version-range}">spring</feature>
         <feature>aries-blueprint</feature>
         <feature>activemq-combined-jms-spec</feature>
-        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40</bundle>
+        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-Name=Jakarta%20XML%20Binding%20API&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40&amp;Bundle-Version=4.0.2</bundle>
         <bundle>mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
         <bundle>mvn:jakarta.activation/jakarta.activation-api/2.1.3</bundle>
         <bundle>mvn:jakarta.annotation/jakarta.annotation-api/2.1.1</bundle>
@@ -66,8 +66,8 @@
       <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/${xstream-bundle.tesb.version}</bundle>
       <bundle dependency="true">mvn:org.apache.aries/org.apache.aries.util/${aries-version}</bundle>
       <bundle dependency="true">mvn:org.codehaus.jettison/jettison/${jettison-version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}</bundle>
-      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${jackson.tesb.version}.spiprov</bundle>
+      <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-databind.tesb.version}.spiprov</bundle>
       <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.tesb.version}</bundle>
     </feature>
 
