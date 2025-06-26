@@ -26,12 +26,12 @@
         <feature version="${spring.tesb.version-range}">spring</feature>
         <feature>aries-blueprint</feature>
         <feature>activemq-combined-jms-spec</feature>
-        <bundle dependency="true">wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2$overwrite=merge&amp;Bundle-Name=Jakarta%20XML%20Binding%20API&amp;Bundle-SymbolicName=jakarta.xml.bind-api-40&amp;Bundle-Version=4.0.2</bundle>
+        <bundle dependency="true">mvn:jakarta.xml.bind/jakarta.xml.bind-api/4.0.2</bundle>
         <bundle>mvn:jakarta.jms/jakarta.jms-api/3.1.0</bundle>
         <bundle>mvn:jakarta.activation/jakarta.activation-api/2.1.3</bundle>
-        <bundle>mvn:jakarta.annotation/jakarta.annotation-api/2.1.1</bundle>
+        <bundle>mvn:jakarta.annotation/jakarta.annotation-api/3.0.0</bundle>
         <bundle>mvn:jakarta.enterprise/jakarta.enterprise.lang-model/4.0.1</bundle>
-        <bundle>mvn:jakarta.el/jakarta.el-api/5.0.1</bundle>
+        <bundle>mvn:jakarta.el/jakarta.el-api/6.0.1</bundle>
         <bundle>mvn:jakarta.inject/jakarta.inject-api/2.0.1</bundle>
         <bundle>mvn:jakarta.interceptor/jakarta.interceptor-api/2.1.0</bundle>
         <bundle>mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/4.0.1</bundle>
@@ -55,8 +55,8 @@
       <feature>connector</feature>
       <feature>http</feature>
       <feature version="${upstream.version}">activemq-client</feature>
-      <!-- <bundle dependency="true">mvn:commons-io/commons-io/${commons-io-version}</bundle> -->
-      <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang-version}</bundle>
+      <!-- <bundle dependency="true">mvn:commons-io/commons-io/${commons-io.tesb.version}</bundle> -->
+      <bundle dependency="true">mvn:org.apache.commons/commons-lang3/${commons-lang.tesb.version}</bundle>
       <bundle dependency="true">mvn:commons-codec/commons-codec/${commons-codec.tesb.version}</bundle>
       <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.velocity/1.7_6</bundle>
       <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/1.9.2_1</bundle>
