@@ -47,11 +47,11 @@
     <activemq-pool.tesb.version>6.1.6.20250310</activemq-pool.tesb.version>
     <activemq-web-console.tesb.version>6.1.6.20250701</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
-    <jackson.tesb.version>2.19.0</jackson.tesb.version>
+    <jackson.tesb.version>2.19.2</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <!-- <jettison.tesb.version>1.5.4</jettison.tesb.version> -->
-    <commons-codec.tesb.version>1.18.0</commons-codec.tesb.version>
-    <commons-io.tesb.version>2.19.0</commons-io.tesb.version>
+    <commons-codec.tesb.version>1.19.0</commons-codec.tesb.version>
+    <commons-io.tesb.version>2.20.0</commons-io.tesb.version>
     <commons-lang.tesb.version>3.18.0</commons-lang.tesb.version>
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.21</xstream.tesb.version>
