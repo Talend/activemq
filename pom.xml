@@ -40,12 +40,12 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.1.6.20250701</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.1.6.20250901</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
     <activemq-blueprint.tesb.version>6.1.6.20250320</activemq-blueprint.tesb.version>
-    <activemq-osgi.tesb.version>6.1.6.20250701</activemq-osgi.tesb.version>
+    <activemq-osgi.tesb.version>6.1.6.20250901</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>6.1.6.20250310</activemq-pool.tesb.version>
-    <activemq-web-console.tesb.version>6.1.6.20250701</activemq-web-console.tesb.version>
+    <activemq-web-console.tesb.version>6.1.6.20250901</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.19.2</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
