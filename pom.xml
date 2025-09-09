@@ -56,11 +56,11 @@
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
-    <netty.tesb.version>4.1.119.Final</netty.tesb.version>
+    <netty.tesb.version>4.1.127.Final</netty.tesb.version>
     <qpid-jms.tesb.version>2.5.0</qpid-jms.tesb.version>
     <xbean.tesb.version>4.27</xbean.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
-    <spring.tesb.version>6.1.21</spring.tesb.version>
+    <spring.tesb.version>6.2.10</spring.tesb.version>
     <spring.tesb.version-range>[6.1,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
