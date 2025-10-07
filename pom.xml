@@ -40,12 +40,12 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.1.6.20250901</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.1.6.20251001</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
     <activemq-blueprint.tesb.version>6.1.6.20250320</activemq-blueprint.tesb.version>
     <activemq-osgi.tesb.version>6.1.6.20250901</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>6.1.6.20250310</activemq-pool.tesb.version>
-    <activemq-web-console.tesb.version>6.1.6.20250901</activemq-web-console.tesb.version>
+    <activemq-web-console.tesb.version>6.1.6.20251001</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.19.2</jackson.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
@@ -60,7 +60,7 @@
     <qpid-jms.tesb.version>2.5.0</qpid-jms.tesb.version>
     <xbean.tesb.version>4.27</xbean.tesb.version>
     <jaxb-bundle.tesb.version>2.3.2_3</jaxb-bundle.tesb.version>
-    <spring.tesb.version>6.2.10</spring.tesb.version>
+    <spring.tesb.version>6.2.11</spring.tesb.version>
     <spring.tesb.version-range>[6.1,7)</spring.tesb.version-range>
 
     <!-- JAR dependency versions -->
@@ -1680,4 +1680,29 @@
      </properties>
    </profile>
   </profiles>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>talend-public</id>
+      <name>Talend Open Source Public group</name>
+      <url>https://artifacts-oss.talend.com/nexus/content/groups/public</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+    <pluginRepository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>thirdparty-releases</id>
+      <name>Third party releases</name>
+      <url>https://artifacts-zl.talend.com/nexus/content/repositories/thirdparty-releases</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
