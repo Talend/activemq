@@ -29,6 +29,11 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Blueprint</name>
   <description>The ActiveMQ Message Broker and Client implementations</description>
+  <version>${revision}</version>
+
+  <properties>
+    <revision>${activemq-blueprint.tesb.version}</revision>
+  </properties>
 
     <dependencies>
         <dependency>
