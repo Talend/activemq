@@ -162,6 +162,7 @@
               org.slf4j.spi;version="[1.6,2)";resolution:=optional,
               org.apache.log4j;version="[2,3)";resolution:=optional,
               org.apache.log4j.spi;version="[2,3)";resolution:=optional,
+              org.talend.cxf.crypto.config;version="[8,9)";resolution:=optional,
               org.eclipse.jetty*;resolution:=optional;version="[9.0,10)",
               org.objectweb.asm*;version="[6,8)"
             </Import-Package>
