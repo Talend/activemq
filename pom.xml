@@ -41,7 +41,7 @@
 
     <activemq-karaf.features.tesb.version>6.2.2.20260322</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
-    <activemq-blueprint.tesb.version>6.2.2.20230322</activemq-blueprint.tesb.version>
+    <activemq-blueprint.tesb.version>6.2.2.20260322</activemq-blueprint.tesb.version>
     <activemq-osgi.tesb.version>6.2.2.20260322</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>6.2.2.202560322</activemq-pool.tesb.version>
     <activemq-web-console.tesb.version>6.2.2.20260322</activemq-web-console.tesb.version>

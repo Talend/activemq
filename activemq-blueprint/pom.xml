@@ -59,11 +59,11 @@
           <configuration>
               <instructions>
                   <Import-Package>
-                      org.apache.xbean*;version="[3.13,5)",
+                      !org.apache.xbean*;version="[3.13,5)",
                       org.apache.aries.blueprint.*;version="[1.0,2)",
                       *
                   </Import-Package>
-                  <Fragment-Host>org.apache.activemq.activemq-osgi</Fragment-Host>
+                  <Fragment-Host>org.apache.activemq.osgi</Fragment-Host>
                   <_noee>true</_noee>
               </instructions>
           </configuration>
