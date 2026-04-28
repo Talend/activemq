@@ -29,8 +29,10 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: OSGi bundle</name>
   <description>Puts together an ActiveMQ OSGi bundle</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-osgi.tesb.version}</revision>
     <surefire.argLine>-Xmx512M</surefire.argLine>
   </properties>
 
@@ -138,6 +140,7 @@
         <inherited>true</inherited>
         <configuration>
           <instructions>
+            <Bundle-SymbolicName>org.apache.activemq.osgi</Bundle-SymbolicName>
             <Bundle-Activator>org.apache.activemq.util.osgi.Activator</Bundle-Activator>
             <Embed-Dependency>
               *;groupId=org.apache.activemq;inline=META-INF/services/*,
@@ -146,8 +149,8 @@
             </Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
             <Export-Package>
-              org.apache.activemq*;version=${project.version};-noimport:=true;-split-package:=merge-first,
-              org.apache.activemq.web*;version=${project.version};-noimport:=true;-split-package:=merge-first
+              org.apache.activemq*;version=${upstream.version};-noimport:=true;-split-package:=merge-first,
+              org.apache.activemq.web*;version=${upstream.version};-noimport:=true;-split-package:=merge-first
             </Export-Package>
             <Import-Package>
               !org.apache.commons.daemon,
@@ -164,7 +167,7 @@
               javax.jmdns*;resolution:=optional,
               javax.resource*;resolution:=optional,
               javax.servlet*;resolution:=optional,
-              jakarta.servlet*;resolution:=optional,
+              jakarta.servlet*;version="[5.0,7)";resolution:=optional,
               com.thoughtworks.xstream*;resolution:=optional,
               org.apache.camel*;resolution:=optional,
               org.apache.camel.spring.handler;resolution:=optional,
@@ -186,6 +189,7 @@
               org.xmlpull*;resolution:=optional,
               !javax.annotation.meta,
               javax.annotation*;version="[1,4)",
+              jakarta.annotation*;version="[2.1,4)",
               !com.thoughtworks.qdox*,
               org.apache.commons.logging;version="[1.2,2)";resolution:=optional,
               jakarta.jms*;version="[3,4)",
@@ -352,84 +356,84 @@
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-client</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-openwire-legacy</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-jaas</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-broker</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-console</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-spring</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-amqp</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-http</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-mqtt</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-stomp</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-kahadb-store</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-jdbc-store</artifactId>
-          <version>${project.version}</version>
+          <version>${upstream.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>

@@ -39,7 +39,7 @@
       *
     </activemq.osgi.import.pkg>
     <activemq.osgi.export>
-      org.apache.activemq.web*;version=${project.version};-noimport:=true,
+      org.apache.activemq.web*;version=${upstream.version};-noimport:=true,
     </activemq.osgi.export>
   </properties>
 

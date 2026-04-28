@@ -79,10 +79,10 @@ public class OsgiConfiguration extends AbstractConfiguration implements ManagedS
                 throw new IllegalArgumentException("A JMS-url must be specified (system property " + SystemPropertiesConfiguration.PROPERTY_JMX_URL);
             }
             jmxUser = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_USER);
-            jmxPassword = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_PASSWORD);
+            jmxPassword = VaultAccess.resolveValue((String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_PASSWORD));
             jmsUrl = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMS_URL);
             jmsUser = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMS_USER);
-            jmsPassword = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMS_PASSWORD);
+            jmsPassword = VaultAccess.resolveValue((String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMS_PASSWORD));
         }
     }
 }
