@@ -106,7 +106,7 @@ public class MQTTWSLinkStealingTest extends WSTransportTestSupport {
 
             @Override
             public boolean isSatisified() throws Exception {
-                return !wsMQTTConnection.isConnected();
+                return !wsMQTTConnection.isOpen();
             }
         }));
 

@@ -26,15 +26,13 @@ import java.util.concurrent.TimeUnit;
 import org.apache.activemq.transport.stomp.StompFrame;
 import org.apache.activemq.transport.stomp.StompWireFormat;
 import org.eclipse.jetty.websocket.api.Session;
-import org.eclipse.jetty.websocket.api.WebSocketAdapter;
-import org.eclipse.jetty.websocket.api.WebSocketListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * STOMP over WS based Connection class
  */
-public class StompWSConnection extends WebSocketAdapter implements WebSocketListener {
+public class StompWSConnection extends Session.Listener.AbstractAutoDemanding {
 
     private static final Logger LOG = LoggerFactory.getLogger(StompWSConnection.class);
 
@@ -48,7 +46,7 @@ public class StompWSConnection extends WebSocketAdapter implements WebSocketList
     private String closeMessage;
 
     @Override
-    public boolean isConnected() {
+    public boolean isOpen() {
         return connection != null ? connection.isOpen() : false;
     }
 
@@ -66,17 +64,17 @@ public class StompWSConnection extends WebSocketAdapter implements WebSocketList
 
     public synchronized void sendRawFrame(String rawFrame) throws Exception {
         checkConnected();
-        connection.getRemote().sendString(rawFrame);
+        connection.sendText(rawFrame, null);
     }
 
     public synchronized void sendFrame(StompFrame frame) throws Exception {
         checkConnected();
-        connection.getRemote().sendString(wireFormat.marshalToString(frame));
+        connection.sendText(wireFormat.marshalToString(frame), null);
     }
 
     public synchronized void keepAlive() throws Exception {
         checkConnected();
-        connection.getRemote().sendString("\n");
+        connection.sendText("\n", null);
     }
 
     //----- Receive methods --------------------------------------------------//
@@ -142,7 +140,7 @@ public class StompWSConnection extends WebSocketAdapter implements WebSocketList
     }
 
     @Override
-    public void onWebSocketConnect(org.eclipse.jetty.websocket.api.Session session) {
+    public void onWebSocketOpen(Session session) {
         this.connection = session;
         this.connection.setIdleTimeout(Duration.ZERO);
         this.connectLatch.countDown();
@@ -151,7 +149,7 @@ public class StompWSConnection extends WebSocketAdapter implements WebSocketList
     //----- Internal implementation ------------------------------------------//
 
     private void checkConnected() throws IOException {
-        if (!isConnected()) {
+        if (!isOpen()) {
             throw new IOException("STOMP WS Connection is closed.");
         }
     }

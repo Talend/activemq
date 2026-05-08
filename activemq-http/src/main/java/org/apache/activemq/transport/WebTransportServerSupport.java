@@ -21,15 +21,17 @@ import java.net.InetAddress;
 import java.net.URI;
 import java.util.Map;
 
-import org.apache.activemq.transport.http.BlockingQueueTransport;
+// import org.apache.activemq.transport.http.BlockingQueueTransport;
 import org.apache.activemq.util.InetAddressUtil;
 import org.apache.activemq.util.IntrospectionSupport;
-import org.eclipse.jetty.security.ConstraintMapping;
-import org.eclipse.jetty.security.ConstraintSecurityHandler;
+import org.eclipse.jetty.ee10.servlet.security.ConstraintMapping;
+import org.eclipse.jetty.ee10.servlet.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.util.resource.Resource;
-import org.eclipse.jetty.util.security.Constraint;
+// import org.eclipse.jetty.util.resource.Resource;
+import org.eclipse.jetty.util.resource.ResourceFactory;
+import org.eclipse.jetty.security.Constraint;
+import org.eclipse.jetty.security.Constraint.Authorization;
 import org.eclipse.jetty.xml.XmlConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,7 +65,7 @@ abstract public class WebTransportServerSupport extends TransportServerSupport {
                 if (!file.exists()) {
                     throw new IllegalArgumentException("Jetty XML not found: " + file.getAbsolutePath());
                 }
-                XmlConfiguration xmlConfiguration = new XmlConfiguration(Resource.newResource(file));
+                XmlConfiguration xmlConfiguration = new XmlConfiguration(ResourceFactory.root().newResource(file.toPath()));
                 server = (Server) xmlConfiguration.configure();
             } catch (Throwable t) {
                 throw new IllegalStateException("Jetty configuration can't be loaded", t);
@@ -111,18 +113,15 @@ abstract public class WebTransportServerSupport extends TransportServerSupport {
 
     protected void configureTraceMethod(ConstraintSecurityHandler securityHandler,
             boolean enableTrace) {
-        Constraint constraint = new Constraint();
-        constraint.setName("trace-security");
         //If enableTrace is true, then we want to set authenticate to false to allow it
-        constraint.setAuthenticate(!enableTrace);
+        Constraint constraint = Constraint.from("", null, enableTrace ? Authorization.INHERIT : Authorization.FORBIDDEN, null);
         ConstraintMapping mapping = new ConstraintMapping();
         mapping.setConstraint(constraint);
         mapping.setMethod("TRACE");
         mapping.setPathSpec("/");
         securityHandler.addConstraintMapping(mapping);
 
-        constraint = new Constraint();
-        constraint.setName("allow");
+        constraint = Constraint.from("allow", null, null, null);
         mapping = new ConstraintMapping();
         mapping.setConstraint(constraint);
         mapping.setMethodOmissions(new String[]{ "TRACE" });

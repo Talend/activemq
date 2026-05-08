@@ -163,7 +163,8 @@
               org.apache.log4j;version="[2,3)";resolution:=optional,
               org.apache.log4j.spi;version="[2,3)";resolution:=optional,
               org.talend.cxf.crypto.config;version="[8,9)";resolution:=optional,
-              org.eclipse.jetty*;resolution:=optional;version="[9.0,10)",
+              org.eclipse.jetty*;resolution:=optional;version="[12.0,13)",
+              org.eclipse.jetty.servlet;resolution:=optional;version="[12.0,13)",
               org.objectweb.asm*;version="[6,8)"
             </Import-Package>
             <_contract>!*</_contract>
@@ -210,8 +211,12 @@
               <artifactId>activemq-all</artifactId>
           </exclusion>
           <exclusion>
-              <groupId>org.eclipse.jetty.websocket</groupId>
-              <artifactId>websocket-server</artifactId>
+              <groupId>org.eclipse.jetty.ee10.websocket</groupId>
+              <artifactId>jetty-ee10-websocket-jakarta-server</artifactId>
+          </exclusion>
+          <exclusion>
+              <groupId>org.eclipse.jetty.ee10.websocket</groupId>
+              <artifactId>jetty-ee10-websocket-jetty-server</artifactId>
           </exclusion>
       </exclusions>
     </dependency>
@@ -333,8 +338,9 @@
     </dependency>
     
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>apache-jsp</artifactId>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-apache-jsp</artifactId>
+      <version>${jetty-version}</version>
       <scope>provided</scope>
       <exclusions>
           <exclusion>

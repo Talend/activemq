@@ -18,9 +18,9 @@ package org.apache.activemq.web.config;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.HandlerCollection;
-import org.eclipse.jetty.webapp.Configuration;
-import org.eclipse.jetty.webapp.WebAppContext;
+import org.eclipse.jetty.server.handler.ContextHandlerCollection;
+// import org.eclipse.jetty.ee10.webapp.Configuration;
+import org.eclipse.jetty.ee10.webapp.WebAppContext;
 
 /**
  *
@@ -28,7 +28,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
  */
 public class JspConfigurer {
 
-    public static void configureJetty(Server server, HandlerCollection collection) {
+    public static void configureJetty(Server server, ContextHandlerCollection collection) {
 //        Configuration.ClassList classlist = Configuration.ClassList
 //                .setServerDefault( server );
 //        classlist.addBefore(

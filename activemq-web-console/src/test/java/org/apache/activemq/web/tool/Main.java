@@ -20,7 +20,7 @@ package org.apache.activemq.web.tool;
 import org.apache.activemq.web.config.JspConfigurer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
-import org.eclipse.jetty.webapp.WebAppContext;
+import org.eclipse.jetty.ee10.webapp.WebAppContext;
 
 /**
  * A simple bootstrap class for starting Jetty in your IDE using the local web
@@ -55,15 +55,13 @@ public final class Main {
         //System.setProperty("webconsole.jms.url","tcp://localhost:61616");
         //System.setProperty("webconsole.jmx.url","service:jmx:rmi:///jndi/rmi://localhost:1099/karaf-root");
 
-        WebAppContext context = new WebAppContext();
+        WebAppContext context = new WebAppContext(WEBAPP_DIR, WEBAPP_CTX);
         ContextHandlerCollection handlers = new ContextHandlerCollection();
         handlers.setHandlers(new WebAppContext[] {context});
 
         JspConfigurer.configureJetty(server, handlers);
 
 
-        context.setResourceBase(WEBAPP_DIR);
-        context.setContextPath(WEBAPP_CTX);
         context.setServer(server);
         server.setHandler(handlers);
         server.start();

@@ -28,17 +28,17 @@ import org.apache.activemq.broker.BrokerServiceAware;
 import org.apache.activemq.command.BrokerInfo;
 import org.apache.activemq.transport.SocketConnectorFactory;
 import org.apache.activemq.transport.WebTransportServerSupport;
-import org.apache.activemq.transport.ws.jetty11.WSServlet;
+import org.apache.activemq.transport.ws.jetty12.WSServlet;
 import org.apache.activemq.util.IntrospectionSupport;
 import org.apache.activemq.util.ServiceStopper;
-import org.eclipse.jetty.security.ConstraintSecurityHandler;
+import org.eclipse.jetty.ee10.servlet.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.server.ConnectionFactory;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.HttpConnectionFactory;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.websocket.server.config.JettyWebSocketServletContainerInitializer;
+import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
+import org.eclipse.jetty.ee10.servlet.ServletHolder;
+import org.eclipse.jetty.ee10.websocket.server.config.JettyWebSocketServletContainerInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -76,7 +76,8 @@ public class WSTransportServer extends WebTransportServerSupport implements Brok
         URI boundTo = bind();
 
         ServletContextHandler contextHandler =
-                new ServletContextHandler(server, "/", ServletContextHandler.SECURITY);
+                new ServletContextHandler("/", ServletContextHandler.SECURITY);
+        server.setHandler(contextHandler);
 
         ServletHolder holder = new ServletHolder();
         JettyWebSocketServletContainerInitializer.configure(contextHandler, null);

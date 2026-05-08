@@ -28,8 +28,10 @@
   <artifactId>activemq-web</artifactId>
   <name>ActiveMQ :: Web</name>
   <description>Web Connector for REST API and Streamlets support</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-web.tesb.version}</revision>
     <activemq.osgi.import.pkg>
       org.apache.activemq*;resolution:=optional,
       org.eclipse.jetty*;resolution:=optional,
@@ -79,12 +81,14 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-webapp</artifactId>
+      <groupId>org.eclipse.jetty.ee10</groupId>
+      <artifactId>jetty-ee10-webapp</artifactId>
+      <version>${jetty-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-jetty-server</artifactId>
+      <groupId>org.eclipse.jetty.ee10.websocket</groupId>
+      <artifactId>jetty-ee10-websocket-jetty-server</artifactId>
+      <version>${jetty-version}</version>
     </dependency>
 
     <!-- Just used for testing -->

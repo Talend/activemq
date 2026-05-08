@@ -27,9 +27,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.activemq.transport.mqtt.MQTTWireFormat;
 import org.apache.activemq.util.ByteSequence;
+import org.eclipse.jetty.websocket.api.Callback;
 import org.eclipse.jetty.websocket.api.Session;
-import org.eclipse.jetty.websocket.api.WebSocketAdapter;
-import org.eclipse.jetty.websocket.api.WebSocketListener;
 import org.fusesource.hawtbuf.UTF8Buffer;
 import org.fusesource.mqtt.codec.CONNACK;
 import org.fusesource.mqtt.codec.CONNECT;
@@ -49,7 +48,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Implements a simple WebSocket based MQTT Client that can be used for unit testing.
  */
-public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListener {
+public class MQTTWSConnection extends Session.Listener.AbstractAutoDemanding {
 
     private static final Logger LOG = LoggerFactory.getLogger(MQTTWSConnection.class);
 
@@ -66,7 +65,7 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
     private String closeMessage;
 
     @Override
-    public boolean isConnected() {
+    public boolean isOpen() {
         return connection != null ? connection.isOpen() : false;
     }
 
@@ -113,7 +112,7 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
     }
 
     public void disconnect() throws Exception {
-        if (!isConnected()) {
+        if (!isOpen()) {
             return;
         }
 
@@ -182,15 +181,17 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
     //----- WebSocket callback handlers --------------------------------------//
 
     @Override
-    public void onWebSocketBinary(byte[] data, int offset, int length) {
-        if (data ==null || length <= 0) {
+    public void onWebSocketBinary(ByteBuffer payload, Callback callback) {
+        if (payload == null || payload.remaining() <= 0) {
             return;
         }
 
         MQTTFrame frame = null;
 
         try {
-            frame = (MQTTFrame)wireFormat.unmarshal(new ByteSequence(data, offset, length));
+            byte[] bytes = new byte[payload.remaining()];
+            payload.get(bytes);
+            frame = (MQTTFrame)wireFormat.unmarshal(new ByteSequence(bytes));
         } catch (IOException e) {
             LOG.error("Could not decode incoming MQTT Frame: {}", e.getMessage());
             connection.close();
@@ -245,7 +246,13 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
                 LOG.error("Unknown MQTT  Frame received.");
                 connection.close();
             }
+            if (callback != null) {
+                callback.succeed();
+            }
         } catch (Exception e) {
+            if (callback != null) {
+                callback.fail(e);
+            }
             LOG.error("Could not decode incoming MQTT Frame: {}", e.getMessage());
             connection.close();
         }
@@ -255,17 +262,17 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
 
     private void sendBytes(ByteSequence payload) throws IOException {
         if (!isWritePartialFrames()) {
-            connection.getRemote().sendBytes(ByteBuffer.wrap(payload.data, payload.offset, payload.length));
+            connection.sendBinary(ByteBuffer.wrap(payload.data, payload.offset, payload.length), null);
         } else {
-            connection.getRemote().sendBytes(ByteBuffer.wrap(
-                payload.data, payload.offset, payload.length / 2));
-            connection.getRemote().sendBytes(ByteBuffer.wrap(
-                payload.data, payload.offset + payload.length / 2, payload.length / 2));
+            connection.sendBinary(ByteBuffer.wrap(
+                payload.data, payload.offset, payload.length / 2), null);
+            connection.sendBinary(ByteBuffer.wrap(
+                payload.data, payload.offset + payload.length / 2, payload.length / 2), null);
         }
     }
 
     private void checkConnected() throws IOException {
-        if (!isConnected()) {
+        if (!isOpen()) {
             throw new IOException("MQTT WS Connection is closed.");
         }
     }
@@ -281,7 +288,7 @@ public class MQTTWSConnection extends WebSocketAdapter implements WebSocketListe
     }
 
     @Override
-    public void onWebSocketConnect(org.eclipse.jetty.websocket.api.Session session) {
+    public void onWebSocketOpen(org.eclipse.jetty.websocket.api.Session session) {
         this.connection = session;
         this.connection.setIdleTimeout(Duration.ZERO);
         this.connectLatch.countDown();

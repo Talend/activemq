@@ -39,12 +39,14 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.2.5.20260322</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.2.5.20260511</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
-    <activemq-blueprint.tesb.version>6.2.5.20260322</activemq-blueprint.tesb.version>
-    <activemq-osgi.tesb.version>6.2.5.20260322</activemq-osgi.tesb.version>
-    <activemq-pool.tesb.version>6.2.5.202560322</activemq-pool.tesb.version>
-    <activemq-web-console.tesb.version>6.2.5.20260322</activemq-web-console.tesb.version>
+    <activemq-blueprint.tesb.version>6.2.5.20260511</activemq-blueprint.tesb.version>
+    <activemq-http.tesb.version>6.2.5.20260511</activemq-http.tesb.version>
+    <activemq-osgi.tesb.version>6.2.5.20260511</activemq-osgi.tesb.version>
+    <activemq-pool.tesb.version>6.2.5.202560511</activemq-pool.tesb.version>
+    <activemq-web.tesb.version>6.2.5.20260511</activemq-web.tesb.version>
+    <activemq-web-console.tesb.version>6.2.5.20260511</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
     <jackson.tesb.version>2.21.2</jackson.tesb.version>
     <jackson-annotations.tesb.version>2.21</jackson-annotations.tesb.version>
@@ -92,8 +94,8 @@
     <jasypt-version>1.9.3</jasypt-version>
     <jaxb-version>4.0.6</jaxb-version>
     <jaxb-bundle-version>2.3.2_1</jaxb-bundle-version>
-    <jetty-version>11.0.26</jetty-version>
-    <jetty-version-range>[11,13)</jetty-version-range>
+    <jetty-version>12.0.33</jetty-version>
+    <jetty-version-range>[12,13)</jetty-version-range>
     <jmdns-version>3.6.3</jmdns-version>
     <javassist-version>3.30.2-GA</javassist-version>
     <jettison-version>1.5.4</jettison-version>
@@ -261,7 +263,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-http</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-http.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
@@ -376,7 +378,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-web</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-web.tesb.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.activemq</groupId>
@@ -387,7 +389,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-web-console</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-web-console.tesb.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
@@ -414,7 +416,7 @@
       <dependency>
         <groupId>org.apache.activemq</groupId>
         <artifactId>activemq-web</artifactId>
-        <version>${upstream.version}</version>
+        <version>${activemq-web.tesb.version}</version>
         <type>war</type>
       </dependency>
       <dependency>
@@ -481,7 +483,7 @@
      <dependency>
        <groupId>jakarta.servlet</groupId>
        <artifactId>jakarta.servlet-api</artifactId>
-       <version>5.0.0</version>
+       <version>6.1.0</version>
      </dependency>
      <dependency>
        <groupId>jakarta.websocket</groupId>
@@ -997,8 +999,10 @@
               <activemq-karaf.features.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.features.tesb.version>
               <activemq-karaf.tesb.version>§{activemq-karaf.tesb.version}</activemq-karaf.tesb.version>
               <activemq-blueprint.tesb.version>${activemq-blueprint.tesb.version}</activemq-blueprint.tesb.version>
+              <activemq-http.tesb.version>${activemq-http.tesb.version}</activemq-http.tesb.version>
               <activemq-osgi.tesb.version>${activemq-osgi.tesb.version}</activemq-osgi.tesb.version>
               <activemq-pool.tesb.version>${activemq-pool.tesb.version}</activemq-pool.tesb.version>
+              <activemq-web.tesb.version>${activemq-web.tesb.version}</activemq-web.tesb.version>
               <activemq-web-console.tesb.version>${activemq-web-console.tesb.version}</activemq-web-console.tesb.version>
               <geronimo-jms2-bundle-override.tesb.version>${geronimo-jms2-bundle-override.tesb.version}</geronimo-jms2-bundle-override.tesb.version>
               <jackson.tesb.version>${jackson.tesb.version}</jackson.tesb.version>

@@ -27,14 +27,14 @@ import org.apache.activemq.transport.WebTransportServerSupport;
 import org.apache.activemq.transport.util.TextWireFormat;
 import org.apache.activemq.transport.xstream.XStreamWireFormat;
 import org.apache.activemq.util.ServiceStopper;
-import org.eclipse.jetty.security.ConstraintSecurityHandler;
+import org.eclipse.jetty.ee10.servlet.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.server.ConnectionFactory;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.HttpConnectionFactory;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.HandlerWrapper;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
+import org.eclipse.jetty.ee10.servlet.ServletHolder;
 
 public class HttpTransportServer extends WebTransportServerSupport {
 
@@ -92,7 +92,8 @@ public class HttpTransportServer extends WebTransportServerSupport {
         URI boundTo = bind();
 
         ServletContextHandler contextHandler =
-            new ServletContextHandler(server, "/", ServletContextHandler.SECURITY);
+            new ServletContextHandler("/", ServletContextHandler.SECURITY);
+        server.setHandler(contextHandler);
 
         ServletHolder holder = new ServletHolder();
         holder.setServlet(new HttpTunnelServlet());
@@ -135,11 +136,11 @@ public class HttpTransportServer extends WebTransportServerSupport {
     }
 
     private void addGzipHandler(ServletContextHandler contextHandler) throws Exception {
-        HandlerWrapper handler = null;
+        Handler.Wrapper handler = null;
         try {
-            handler = (HandlerWrapper) forName("org.eclipse.jetty.servlets.gzip.GzipHandler").getConstructor().newInstance();
+            handler = (Handler.Wrapper) forName("org.eclipse.jetty.servlets.gzip.GzipHandler").getConstructor().newInstance();
         } catch (Throwable t) {
-            handler = (HandlerWrapper) forName("org.eclipse.jetty.server.handler.gzip.GzipHandler").getConstructor().newInstance();
+            handler = (Handler.Wrapper) forName("org.eclipse.jetty.server.handler.gzip.GzipHandler").getConstructor().newInstance();
         }
         contextHandler.insertHandler(handler);
     }
