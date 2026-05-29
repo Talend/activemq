@@ -29,8 +29,10 @@
   <packaging>bundle</packaging>
   <name>ActiveMQ :: Client</name>
   <description>The ActiveMQ Client implementation</description>
+  <version>${revision}</version>
 
   <properties>
+    <revision>${activemq-client.tesb.version}</revision>
     <maven.source.skip>false</maven.source.skip>
     <surefire.argLine>-Xmx512M</surefire.argLine>
   </properties>

@@ -39,11 +39,12 @@
     <!-- base url for site deployment.  See distribution management for full url.  Override this in settings.xml for staging -->
     <staging.siteURL>scp://people.apache.org/x1/www/activemq.apache.org</staging.siteURL>
 
-    <activemq-karaf.features.tesb.version>6.2.5.20260511</activemq-karaf.features.tesb.version>
+    <activemq-karaf.features.tesb.version>6.2.5.20260528</activemq-karaf.features.tesb.version>
     <activemq-karaf.tesb.version>${activemq-karaf.features.tesb.version}</activemq-karaf.tesb.version>
     <activemq-blueprint.tesb.version>6.2.5.20260511</activemq-blueprint.tesb.version>
+    <activemq-client.tesb.version>6.2.5.20260528</activemq-client.tesb.version>
     <activemq-http.tesb.version>6.2.5.20260511</activemq-http.tesb.version>
-    <activemq-osgi.tesb.version>6.2.5.20260511</activemq-osgi.tesb.version>
+    <activemq-osgi.tesb.version>6.2.5.20260528</activemq-osgi.tesb.version>
     <activemq-pool.tesb.version>6.2.5.202560511</activemq-pool.tesb.version>
     <activemq-web.tesb.version>6.2.5.20260511</activemq-web.tesb.version>
     <activemq-web-console.tesb.version>6.2.5.20260511</activemq-web-console.tesb.version>
