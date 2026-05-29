@@ -43,6 +43,13 @@
       <artifactId>activemq-broker</artifactId>
     </dependency>
 
+    <!-- The to force version of client -->
+    <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-client</artifactId>
+        <version>${activemq-client.tesb.version}</version>
+    </dependency>
+
     <!-- Additional message store impls -->
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -356,7 +363,7 @@
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>activemq-client</artifactId>
-          <version>${upstream.version}</version>
+          <version>${activemq-client.tesb.version}</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
