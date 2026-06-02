@@ -52,9 +52,9 @@
     <jackson-annotations.tesb.version>2.21</jackson-annotations.tesb.version>
     <jackson-databind.tesb.version>${jackson.tesb.version}</jackson-databind.tesb.version>
     <!-- <jettison.tesb.version>1.5.4</jettison.tesb.version> -->
-    <commons-codec.tesb.version>1.20.0</commons-codec.tesb.version>
+    <commons-codec.tesb.version>1.21.0</commons-codec.tesb.version>
     <!-- <commons-io.tesb.version>2.21.0</commons-io.tesb.version> -->
-    <commons-lang.tesb.version>3.19.0</commons-lang.tesb.version>
+    <commons-lang.tesb.version>3.20.0</commons-lang.tesb.version>
     <!-- <commons-net.tesb.version>3.9.0</commons-net.tesb.version> -->
     <xstream.tesb.version>1.4.21</xstream.tesb.version>
     <xstream-bundle.tesb.version>1.4.20_1</xstream-bundle.tesb.version>
