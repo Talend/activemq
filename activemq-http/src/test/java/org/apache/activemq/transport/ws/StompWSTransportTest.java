@@ -136,7 +136,7 @@ public class StompWSTransportTest extends WSTransportTestSupport {
                 + " unexpected frame before CONNECT or STOMP frame: SEND"));
 
         assertTrue("Connection should close", Wait.waitFor(
-                (Condition) () -> wsStompConnection.isNotConnected()));
+                (Condition) () -> !wsStompConnection.isOpen()));
     }
 
     @Test(timeout = 60000)
@@ -165,7 +165,7 @@ public class StompWSTransportTest extends WSTransportTestSupport {
         assertTrue(incoming.contains("Specified content-length may not be negative"));
 
         assertTrue("Connection should close", Wait.waitFor(
-                (Condition) () -> wsStompConnection.isNotConnected()));
+                (Condition) () -> !wsStompConnection.isOpen()));
     }
 
     @Test(timeout = 60000)
@@ -192,7 +192,7 @@ public class StompWSTransportTest extends WSTransportTestSupport {
         assertTrue(incoming.contains("duplicate CONNECT or STOMP frame"));
 
         assertTrue("Connection should close", Wait.waitFor(
-                (Condition) () -> wsStompConnection.isNotConnected()));
+                (Condition) () -> !wsStompConnection.isOpen()));
     }
 
     @Test(timeout = 60000)
@@ -221,7 +221,7 @@ public class StompWSTransportTest extends WSTransportTestSupport {
 
         // make sure the connection was closed by the server
         assertTrue("Connection should close", Wait.waitFor(
-                (Condition) () -> wsStompConnection.isNotConnected()));
+                (Condition) () -> !wsStompConnection.isOpen()));
     }
 
     @Test(timeout = 60000)
