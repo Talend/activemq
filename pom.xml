@@ -44,7 +44,7 @@
     <activemq-blueprint.tesb.version>6.2.7.20260801</activemq-blueprint.tesb.version>
     <activemq-http.tesb.version>6.2.7.20260801</activemq-http.tesb.version>
     <activemq-osgi.tesb.version>6.2.7.20260801</activemq-osgi.tesb.version>
-    <activemq-pool.tesb.version>6.2.7.202560801</activemq-pool.tesb.version>
+    <activemq-pool.tesb.version>6.2.7.20260801</activemq-pool.tesb.version>
     <activemq-web.tesb.version>6.2.7.20260801</activemq-web.tesb.version>
     <activemq-web-console.tesb.version>6.2.7.20260801</activemq-web-console.tesb.version>
     <geronimo-jms2-bundle-override.tesb.version>1.0.0.tp20240209</geronimo-jms2-bundle-override.tesb.version>
