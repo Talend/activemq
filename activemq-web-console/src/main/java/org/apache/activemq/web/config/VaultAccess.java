@@ -28,6 +28,7 @@ class VaultAccess {
 
     private static Object vaultObject;
     private static Method vaultAccessMethod;
+    private static String configuredVaultKey;
 
     private VaultAccess() {
     }
@@ -42,6 +43,14 @@ class VaultAccess {
         String resKey = value.substring(VAULT_PREFIX_LEN, value.length() - VAULT_SUFFIX_LEN);
         String result = getValue(resKey);
         return result == null ? value : result;
+    }
+
+    public static String getVaultKey() {
+        return configuredVaultKey;
+    }
+
+    public static void setVaultKey(String vaultKey) {
+        configuredVaultKey = vaultKey;
     }
 
     private static String getValue(String resKey) {
@@ -60,33 +69,37 @@ class VaultAccess {
             Class<?> cls = VaultAccess.class.getClassLoader().loadClass("org.talend.cxf.crypto.config.SimpleVault");
             Constructor<?> c = cls.getConstructor(String.class);
             Method m = cls.getMethod("getValue", String.class);
-            char[] vaultKeyChars = new char[12];
-            // FIXME configurable vault key
-            vaultKeyChars[0] = 'h';
-            vaultKeyChars[1] = 'e';
-            vaultKeyChars[2] = 't';
-            vaultKeyChars[3] = 'B';
-            vaultKeyChars[4] = 'w';
-            vaultKeyChars[5] = '1';
-            vaultKeyChars[6] = '1';
-            vaultKeyChars[7] = 'B';
-            vaultKeyChars[8] = '1';
-            vaultKeyChars[9] = 'N';
-            vaultKeyChars[10] = 'O';
-            vaultKeyChars[11] = '6';
-            ++vaultKeyChars[0];
-            --vaultKeyChars[1];
-            ++vaultKeyChars[2];
-            --vaultKeyChars[3];
-            ++vaultKeyChars[4];
-            --vaultKeyChars[5];
-            ++vaultKeyChars[6];
-            --vaultKeyChars[7];
-            ++vaultKeyChars[8];
-            --vaultKeyChars[9];
-            ++vaultKeyChars[10];
-            --vaultKeyChars[11];
-            Object vo = c.newInstance(new String(vaultKeyChars));
+            String vaultKey = configuredVaultKey;
+            if (vaultKey == null || vaultKey.length() == 0) {
+                // default key for obfuscating mode
+                char[] vaultKeyChars = new char[12];
+                vaultKeyChars[0] = 'h';
+                vaultKeyChars[1] = 'e';
+                vaultKeyChars[2] = 't';
+                vaultKeyChars[3] = 'B';
+                vaultKeyChars[4] = 'w';
+                vaultKeyChars[5] = '1';
+                vaultKeyChars[6] = '1';
+                vaultKeyChars[7] = 'B';
+                vaultKeyChars[8] = '1';
+                vaultKeyChars[9] = 'N';
+                vaultKeyChars[10] = 'O';
+                vaultKeyChars[11] = '6';
+                ++vaultKeyChars[0];
+                --vaultKeyChars[1];
+                ++vaultKeyChars[2];
+                --vaultKeyChars[3];
+                ++vaultKeyChars[4];
+                --vaultKeyChars[5];
+                ++vaultKeyChars[6];
+                --vaultKeyChars[7];
+                ++vaultKeyChars[8];
+                --vaultKeyChars[9];
+                ++vaultKeyChars[10];
+                --vaultKeyChars[11];
+                vaultKey = new String(vaultKeyChars);
+            }
+            Object vo = c.newInstance(vaultKey);
             vaultObject = vo;
             vaultAccessMethod = m;
         }
