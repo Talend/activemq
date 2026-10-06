@@ -76,8 +76,9 @@ public class OsgiConfiguration extends AbstractConfiguration implements ManagedS
         if (dictionary != null) {
             jmxUrl = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_URL);
             if (jmxUrl == null) {
-                throw new IllegalArgumentException("A JMS-url must be specified (system property " + SystemPropertiesConfiguration.PROPERTY_JMX_URL);
+                throw new IllegalArgumentException("A JMX-url must be specified (system property " + SystemPropertiesConfiguration.PROPERTY_JMX_URL);
             }
+            VaultAccess.setVaultKey((String) dictionary.get("org.talend.esb.vault.access,key"));
             jmxUser = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_USER);
             jmxPassword = VaultAccess.resolveValue((String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMX_PASSWORD));
             jmsUrl = (String) dictionary.get(SystemPropertiesConfiguration.PROPERTY_JMS_URL);
