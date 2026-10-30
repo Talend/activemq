@@ -1,5 +1,0 @@
-@Library('esb') _
-
-Fork(
-        MVN_MODULES: ':activemq-karaf,:activemq-osgi,:activemq-blueprint,:activemq-http,:activemq-pool,:activemq-web,:activemq-web-console'
-)
