@@ -1562,6 +1562,21 @@
    </profile>
   </profiles>
 
+  <!-- the Talend-built (dated) modules a module built alone depends on, e.g. activemq-osgi for activemq-karaf -->
+  <repositories>
+    <repository>
+      <id>global-artifacts</id>
+      <name>Talend global-artifacts (GitHub Packages)</name>
+      <url>https://maven.pkg.github.com/Talend/global-artifacts</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
   <pluginRepositories>
     <pluginRepository>
       <id>global-artifacts</id>
